@@ -1,0 +1,74 @@
+.container {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    margin: auto;
+    position: relative;
+}
+
+.content{
+    color: rgb(0, 0, 0);
+    font-family: Stem;
+    font-size: 14px;
+    letter-spacing: 0%;
+    margin: 30px 10px;
+    position: relative;
+}
+
+.text{
+    width: 620px;
+    position: relative;
+	font-size: 48px;
+    font-weight: 700;
+	font-family: 'Stem', sans-serif;
+}
+
+.text_under{
+    position: relative;
+    width: 670px;
+    font-size: 20px;
+    font-weight: 350;
+    font-family: 'Stem'; 
+}
+
+.textColumn {
+    flex: 1;
+}
+
+.buttonOne{
+    padding: 10px 25px;
+    border-radius: 50px ;
+    margin: 15px 45px;
+    color: rgb(255, 255, 255);
+    font-family: Stem;
+    font-size: 16px;
+    letter-spacing: 0%;
+    text-align: center;
+    border: 2px solid rgb(61, 133, 104);
+    background-color: rgb(61, 133, 104);
+}
+
+.buttonTwo{
+    padding: 10px 25px;
+    border-radius: 50px ;
+    margin: 15px 45px;
+    color: rgb(61, 133, 104);
+    font-family: Stem;
+    font-size: 16px;
+    letter-spacing: 0%;
+    text-align: center;
+    border: 3px solid rgb(61, 133, 104);
+}
+
+.imageColumn {
+    display: flex;
+    align-self: flex-end;
+}
+
+.image {
+    right: 70px;
+    position: relative;
+    height: 500px;
+    width: 640px;
+    z-index: 1;
+}

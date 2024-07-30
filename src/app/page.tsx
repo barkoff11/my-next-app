@@ -4,6 +4,8 @@ export default function Home() {
   return (
     <div>
       <Header/>
+      {/* <Researches/>
+      <Content/> */}
     </div>
   );
 }

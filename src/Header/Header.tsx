@@ -27,19 +27,21 @@ const Header: React.FC = () => {
     return (
         <div className={styles.container}>
             <div className={`${styles.logo} ${isMenuActive ? styles.logo_active : ''}`}>Элемент.ОP</div>
-            <nav className={styles.blur}>
-                <ul className={`${styles.menu} ${isMenuActive ? styles.menu_active : ''}`}>
-                    <li><a href="#">О компании</a></li>
-                    <li><a href="#">Решения</a></li>
-                    <li><a href="#">Методы</a></li>
-                    <li><a href="#">Пример исследований</a></li>
-                    <li><a href="#">Новости</a></li>
-                    <li><a href="#">Контакты</a></li>
-                </ul>
-                <div className={styles.burger_icon} onClick={toggleMenu}>
-                    <span></span>
-                </div>
-            </nav>
+                 <nav className={`${isMenuActive ? styles.blur : ''}`}>
+                    <ul className={`${styles.menu} ${isMenuActive ? styles.menu_active : ''}`}>
+                        <li><a href="#">О компании</a></li>
+                        <li><a href="#">Решения</a></li>
+                        <li><a href="#">Методы</a></li>
+                        <li><a href="#">Пример исследований</a></li>
+                        <li><a href="#">Новости</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                    <div className={styles.burger_icon} onClick={toggleMenu}>
+                        <span></span>
+                    </div>
+                    {/* <img src='../../img/header__logo.svgекнродлорпавае
+                    эзщ87'></img> */}
+                    </nav>
         </div>
     );
 };

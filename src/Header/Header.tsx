@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import styles from './Header.module.scss'; // Импортируйте ваши стили
 
 const Header: React.FC = () => {
+    const BASE_PATH = process.env.REACT_APP_BASE_PATH;
     const [isMenuActive, setMenuActive] = useState(false);
 
     const toggleMenu = () => {
@@ -28,7 +29,7 @@ const Header: React.FC = () => {
         <div className={styles.container}>
             <div className={`${styles.logo} ${isMenuActive ? styles.logo_active : ''}`}>
             <svg width='18' height='18'>
-                <use xlinkHref='../../img/sprite.svg#Logo'></use>
+            <use xlinkHref={`${BASE_PATH}/public/img/sprite.svg#header__logo`}></use>
               </svg>
             </div>
                  <nav className={`${isMenuActive ? styles.blur : ''}`}>

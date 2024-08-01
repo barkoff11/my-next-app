@@ -26,7 +26,11 @@ const Header: React.FC = () => {
 
     return (
         <div className={styles.container}>
-            <div className={`${styles.logo} ${isMenuActive ? styles.logo_active : ''}`}>Элемент.ОP</div>
+            <div className={`${styles.logo} ${isMenuActive ? styles.logo_active : ''}`}>
+            <svg width='18' height='18'>
+                <use xlinkHref='../../img/sprite.svg#Logo'></use>
+              </svg>
+            </div>
                  <nav className={`${isMenuActive ? styles.blur : ''}`}>
                     <ul className={`${styles.menu} ${isMenuActive ? styles.menu_active : ''}`}>
                         <li><a href="#">О компании</a></li>

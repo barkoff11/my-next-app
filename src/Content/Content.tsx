@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './Content.module.scss';
 
 const Content = () => {
+    const BASE_PATH = process.env.REACT_APP_BASE_PATH;
   return (
 <div className={styles.container}>
     <div className={styles.textColumn}>
@@ -12,26 +13,38 @@ const Content = () => {
             Маркетинговое агентство «Элементор» – ваш проводник в решении актуальных бизнес-задач:
         </div>
         <div className={styles.column}>
-            <div className={styles.content}>
-                Маркетинговое исследование для оценки привлекательности нового потребительского рынка или нового региона
-            </div>
-            <div className={styles.content}>
-                Анализ таможенной статистики для выявления основных конкурентов, поиска новых поставщиков и покупателей за рубежом
-            </div>    
-            <div className={styles.content}>
-                Замер уровня знания и уровня лояльности к торговой марке для оценки текущего положения компании на рынке
-            </div>
+            <ul className={styles.contentList}>
+                <li className={styles.content}>
+                    <svg>
+                        <use xlinkHref={`${BASE_PATH}/img/sprite.svg#tasks__item--research`}></use>
+                    </svg>
+                    Маркетинговое исследование для оценки привлекательности нового потребительского рынка или нового региона
+                </li>
+                <li className={styles.content}>
+                    <svg>
+                        <use xlinkHref={`${BASE_PATH}/img/sprite.svg#tasks__item--analysis`}></use>
+                    </svg>
+                    Анализ таможенной статистики для выявления основных конкурентов, поиска новых поставщиков и покупателей за рубежом
+                </li>
+                <li className={styles.content}>
+                    <svg>
+                        <use xlinkHref={`${BASE_PATH}/img/sprite.svg#tasks__item--measuring`}></use>
+                    </svg>
+                    Замер уровня знания и уровня лояльности к торговой марке для оценки текущего положения компании на рынке
+                </li>
+            </ul>
         </div>
-        <div>
-            <div className={styles.column}>
-                <div className={styles.content}>Наш главный актив</div>
-                <div className={styles.content}>квалифицированные специалисты в области маркетинга, менеджмента, социологии, математики и IT.</div>
-            </div>
-            <div>
-                <div>Наша цель</div>
-                <div>предоставить достоверную информацию для наших клиентов</div>
-            </div>
-        </div>
+    <ul className={styles.column}>
+        <li className={styles.item}>
+            <h1>Наш главный актив</h1>
+            <div>квалифицированные специалисты в области маркетинга, менеджмента, социологии, математики и IT.</div>
+        </li>
+        <li className={styles.items}>
+            <h1>Наша цель</h1>
+            <div>предоставить достоверную информацию для наших клиентов</div>
+        </li>
+    </ul>
+
         
     </div>
 </div>

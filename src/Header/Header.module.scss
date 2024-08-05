@@ -1,5 +1,5 @@
 .container {
-    padding: 20px 200px 50px 200px;
+    padding: 0px 200px 60px 200px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -8,9 +8,8 @@
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    margin-bottom: 10%;
     z-index: 1;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
 .menu{
@@ -32,44 +31,34 @@
 	font-family: 'Poppins', sans-serif;
 }
 
-.circle::after {
-    top: -200px;
-    left: 55%;
-    width: 590px;
-    height: 590px;
-    border-radius: 50%;
-    border: 50px solid #F5F9F7;
-    position: absolute;
-    z-index: 0;
-}
-.circle::before {
-    top: -200px;
-    left: 55%;
-    width: 590px;
-    height: 590px;
-    border-radius: 50%;
-    border: 50px solid #F5F9F7;
-    position: absolute;
-    z-index: 0;
+.logo svg{
+    width: 110px;
+    height: 80px;
 }
 
-.circle::before {
-    content: '';
-    position: absolute;
-    top: -20px; 
-    left: -20px; 
-    width: calc(100% + 40px); 
-    height: calc(100% + 40px); 
+.circle {
+    top: -200px;
+    left: 55%;
+    width: 590px;
+    height: 590px;
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.5);
+    border: 50px solid #F5F9F7;
+    position: fixed;
     z-index: -1;
+}
+
+
+.burger_icon{
+    display: none;
 }
 
 @media (max-width: 768px) {
     .container{
-        padding: 25px 20px 20px 20px;
+        width: 140%;
+        padding: 0 20px 20px 0;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
+        align-items: center;
         position: relative;
         z-index: 10;
     }
@@ -85,6 +74,13 @@
         color: gray; 
         z-index: 10;
     }
+
+    .logo svg{
+        left: 40px;
+        display: block;
+        width: 100px; 
+        height: 80px;
+    }
     
     .blur {
         position: fixed; /* Фиксируем элемент */
@@ -98,36 +94,17 @@
     }
 
     .burger_icon{
-        width: 20px;
-        height: 20px;
-        margin-left: 120px;
+        display: block;
+        margin-left: 20px;
         position: relative;
         cursor: pointer;
         z-index: 10;
     }
-    
-    .burger_icon::after{
-        content: '';
-        position: absolute;
-        top: 0;
-        width: 30px;
-        background-color: black;
-        height: 2px;
-    }
-    .burger_icon::before{
-        content: '';
-        position: absolute;
-        bottom: 0;
-        width: 30px;
-        background-color: black;
-        height: 2px;
-    }
-    .burger_icon span{
-        position: absolute;
-        top: 10px;
-        width: 30px;
-        background-color: black;
-        height: 2px;
+
+    .burger_icon svg{
+        right: 25px;
+        width: 20px;
+        height: 20px;
     }
     
     .menu{
@@ -156,10 +133,90 @@
         margin-bottom: 15px;
     }
 
+    .circle{
+        left: 70%;
+    }
+
 }
    
 @media (max-width: 320px) {
-   
+    .container{
+        padding: 0 2px 2px 2px;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        z-index: 10;
+    }
+
+    .logo {
+        transition: transform 0.9s ease, color 0.3s ease; 
+        color: black; 
+        width: 90px;
+        height: 90px;
+        z-index: 10;
+    }
+    
+    .logo_active {
+        transform: translateY(calc(80vh - 30px)); /* Перемещение вниз на 100% высоты экрана */
+        color: gray; 
+        z-index: 10;
+    }
+
+    .logo svg{
+        padding-left: 5px;
+        width: 90px; 
+        height: 90px;
+    }
+    
+    .blur {
+        position: fixed; /* Фиксируем элемент */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+        backdrop-filter: blur(10px); /* Эффект размытия */
+        z-index: 5; /* Убедитесь, что он выше других элементов */
+    }
+
+    .burger_icon{
+        width: 20px;
+        height: 20px;
+        position: relative;
+        cursor: pointer;
+        z-index: 10;
+    }
+
+    .burger_icon svg{
+        width: 20px;
+        height: 20px;
+    }
+    
+    .menu{
+        padding: 5% 0 0 2%;
+        background-color: #F5F9F7;
+        position: fixed;
+        display: none;
+        align-items: center;
+        flex-direction: column;
+        width: 90vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        transform: translateX(-100%);
+        transition: all 0.2s;
+    }
+    
+    .menu_active{
+        transform: translateX(0);
+        display: block;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    }
+
+    .menu li{
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
 }
 
 

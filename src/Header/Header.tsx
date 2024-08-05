@@ -28,8 +28,8 @@ const Header: React.FC = () => {
     return (
         <div className={styles.container}>
             <div className={`${styles.logo} ${isMenuActive ? styles.logo_active : ''}`}>
-            <svg width='18' height='18'>
-            <use xlinkHref={`${BASE_PATH}/public/img/sprite.svg#header__logo`}></use>
+            <svg>
+            <use xlinkHref={`${BASE_PATH}/img/sprite.svg#header__logo`}></use>
               </svg>
             </div>
                  <nav className={`${isMenuActive ? styles.blur : ''}`}>
@@ -41,12 +41,13 @@ const Header: React.FC = () => {
                         <li><a href="#">Новости</a></li>
                         <li><a href="#">Контакты</a></li>
                     </ul>
-                    <div className={styles.burger_icon} onClick={toggleMenu}>
-                        <span></span>
-                    </div>
-                    {/* <img src='../../img/header__logo.svgекнродлорпавае
-                    эзщ87'></img> */}
-                    </nav>
+                <div className={`${styles.burger_icon} ${isMenuActive ? styles.burger_active : ''}`} onClick={toggleMenu}>
+        <svg>
+            <use xlinkHref={`${BASE_PATH}/img/sprite.svg#${isMenuActive ? 'header__menu-close' : 'header__menu-open'}`}></use>
+        </svg>
+    </div>
+                </nav>
+                <div className={styles.circle}></div>
         </div>
     );
 };

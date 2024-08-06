@@ -1,3 +1,4 @@
+import AssessmentOfBrand from "@/AssessmentOfBrand/AssessmentOfBrand";
 import Content from "@/Content/Content";
 import Header from "@/Header/Header";
 import Researches from "@/Researches/Researches";
@@ -8,6 +9,7 @@ export default function Home() {
       <Header/>
       <Researches/>
       <Content/>
+      <AssessmentOfBrand/>
     </div>
   );
 }

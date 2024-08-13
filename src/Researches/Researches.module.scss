@@ -1,30 +1,27 @@
 .container {
-    padding: 0px 250px 20px 250px;
     display: flex;
-    align-items: flex-start;
-    width: 100%;
-    max-width: 1900px;
-    min-width: 800px;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 58%;
     margin: auto;
     position: relative;
+    z-index: 1;
+    padding-bottom: 146px;
 }
 
-
-
 .text{
-    width: 620px;
+    width: 630px;
     position: relative;
-	font-size: 48px;
+	font-size: 40px;
     font-weight: 700;
-	font-family: 'Stem', sans-serif;
+    margin-bottom: 23px;
 }
 
 .text_under{
     position: relative;
-    width: 670px;
-    font-size: 20px;
+    width: 530px;
+    font-size: 17px;
     font-weight: 350;
-    font-family: 'Stem'; 
 }
 
 .textColumn {
@@ -32,25 +29,24 @@
 }
 
 .buttonOne{
-    padding: 10px 25px;
-    border-radius: 50px ;
-    margin: 15px 45px;
+    padding: 12px 43px;
+    border-radius: 50px;
+    margin: 15px 11px 15px 0px;
     color: rgb(255, 255, 255);
-    font-family: Stem;
-    font-size: 16px;
+    font-size: 13px;
     letter-spacing: 0%;
     text-align: center;
     border: 2px solid rgb(61, 133, 104);
     background-color: rgb(61, 133, 104);
 }
 
+
 .buttonTwo{
-    padding: 10px 25px;
-    border-radius: 50px ;
-    margin: 15px 45px;
+    padding: 12px 41px;
+    border-radius: 50px;
+    margin: 15px 25px;
     color: rgb(61, 133, 104);
-    font-family: Stem;
-    font-size: 16px;
+    font-size: 13px;
     letter-spacing: 0%;
     text-align: center;
     border: 3px solid rgb(61, 133, 104);
@@ -61,26 +57,259 @@
     align-self: flex-end;
 }
 
-.content svg{
+.svg{
     margin: 0 20px 0 8px;
-    width: 70px;
+    width: 50px;
     height: 30px;
 }
 
 .content{
     display: flex;
     color: rgb(0, 0, 0);
-    font-family: Stem;
-    font-size: 14px;
+    font-size: 12px;
     letter-spacing: 0%;
-    margin: 30px 10px;
+    margin: 46px -10px;
     position: relative;
 }
 
+.content:nth-child(1){
+    margin-right: 8px;
+}
+
 .image {
-    right: 70px;
+    right: 74px;
+    top: -13px;
     position: relative;
-    height: 500px;
-    width: 640px;
+    height: 441px;
+    width: 559px;
     z-index: 1;
+}
+
+.container::before {
+    content: '';
+    top: -102px;
+    left: 706px;
+    width: 800px;
+    height: 800px;
+    border-radius: 50%;
+    border: 80px solid #4a9781;
+    position: absolute;
+    z-index: -2;
+}
+
+@media (max-width: 980px) {
+    .container {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 66%;
+        margin: auto;
+        position: relative;
+        z-index: 1;
+        padding-bottom: 70px;
+    }
+    
+    .text{
+        width: 363px;
+        position: relative;
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 27px;
+    }
+    
+    .text_under{
+        position: relative;
+        width: 346px;
+        font-size: 16px;
+        margin-bottom: 27px;
+        font-weight: 350;
+    }
+    
+    .textColumn {
+        flex: 1;
+    }
+    
+    .buttonOne{
+        content: "";
+        padding: 12px 43px;
+        border-radius: 50px;
+        margin: 59px 0px 15px 0px;
+        color: rgb(255, 255, 255);
+        font-size: 13px;
+        letter-spacing: 0%;
+        text-align: center;
+        border: 2px solid rgb(61, 133, 104);
+        background-color: rgb(61, 133, 104);
+    }
+    
+    
+    .buttonTwo{
+        padding: 12px 35px;
+        border-radius: 50px;
+        margin: 15px 0px 0px 23px;
+        color: rgb(61, 133, 104);
+        font-size: 13px;
+        letter-spacing: 0%;
+        text-align: center;
+        border: 3px solid rgb(61, 133, 104);
+    }
+    
+    .imageColumn {
+        width: 400px;
+        display: flex;
+        align-self: flex-end;
+        flex-wrap: wrap;
+    }
+    
+    .svg{
+        margin: 0px 22px 0 9px;
+        width: 54px;
+        height: 27px;
+    }
+
+    .content{
+        display: flex;
+        color: rgb(0, 0, 0);
+        font-size: 12px;
+        letter-spacing: 0%;
+        margin: 5px -10px;
+        position: relative;
+    }
+    
+    .content:nth-child(1){
+        margin-right: 0px;
+    }
+
+    .content:nth-child(2){
+        margin: 21px 0 0 -16px;
+    }
+
+.image{
+    width: 590px;
+    height: 505px;
+    top: -28px;
+    right: 52px;
+    position: relative;
+    z-index: 10;
+}
+
+.container::before {
+    top: 43px;
+    left: 573px;
+    width: 800px;
+    height: 800px;
+    border-radius: 50%;
+    border: 80px solid #4a9781;
+    z-index: -2;
+}
+}
+
+@media (max-width: 320px) {
+    .container {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 85%;
+        margin: auto;
+        position: relative;
+        z-index: 1;
+        padding-bottom: 70px;
+    }
+    
+    .text{
+        width: 250px;
+        position: relative;
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 31px;
+    }
+    
+    .text_under{
+        position: relative;
+        width: 250px;
+        font-size: 15px;
+        margin-bottom: 27px;
+        font-weight: 350;
+    }
+    
+    .textColumn {
+        flex: 1;
+    }
+
+    .buttonContainer{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    
+    .buttonOne{
+        padding: 12px 43px;
+        border-radius: 50px;
+        margin: 13px 3px 15px 0px;
+        color: rgb(255, 255, 255);
+        font-size: 13px;
+        letter-spacing: 0%;
+        text-align: center;
+        border: 2px solid rgb(61, 133, 104);
+        background-color: rgb(61, 133, 104);
+    }
+    
+    
+    .buttonTwo{
+        padding: 9px 18px;
+        border-radius: 50px;
+        margin: 62px 3px 0px 0px;
+        color: rgb(61, 133, 104);
+        font-size: 13px;
+        letter-spacing: 0%;
+        text-align: center;
+        border: 3px solid rgb(61, 133, 104);
+    }
+    
+    .imageColumn {
+        width: 230px;
+        display: flex;
+        align-self: flex-end;
+        flex-wrap: wrap;
+        margin-bottom: 209px;
+    }
+    
+    .svg{
+        margin: 0px 22px 0 9px;
+        width: 87px;
+        height: 27px;
+    }
+
+    .content{
+        display: flex;
+        color: rgb(0, 0, 0);
+        font-size: 11px;
+        line-height: 15px;
+        margin: 9px -10px;
+        position: relative;
+    }
+
+    .content:nth-child(2) {
+        margin: 13px 0 0 -24px;
+    }
+
+.image{
+    display: block;
+    width: 270px;
+    height: 212px;
+    right: 0px;
+    left: -261px;
+    top: 184px;
+    position: relative;
+    z-index: 10;
+}
+
+.container::before {
+    top: 43px;
+    left: 573px;
+    width: 800px;
+    height: 800px;
+    border-radius: 50%;
+    border: 80px solid #4a9781;
+    z-index: -2;
+}
 }

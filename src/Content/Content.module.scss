@@ -1,8 +1,8 @@
 .container {
-    padding: 0px 250px 20px 250px;
     display: flex;
     align-items: flex-start;
-    width: 100%;
+    width: 58%;
+    margin: auto;
     max-width: 1900px;
     min-width: 800px;
     margin: auto;
@@ -17,7 +17,6 @@
     padding: 35px 45px 35px 40px;
     margin: 20px;
     background: rgb(245, 245, 245);
-    font-family: 'Stem', sans-serif;
     font-size: 16px;
     font-weight: 350;
     line-height: 130%;
@@ -32,7 +31,6 @@
     display: flex;
 	font-size: 16px;
 	font-weight: 500;
-	font-family: 'Poppins', sans-serif;
 }
 
 .contentList svg{
@@ -43,8 +41,8 @@
 
 .text{
     color: rgb(0, 0, 0);
-    font-family: 'Stem', sans-serif;
-    font-size: 40px;
+    font-size: 33px;
+    margin-bottom: 21px;
     font-weight: 700;
     line-height: 120%;
     letter-spacing: 0%;
@@ -53,8 +51,7 @@
 
 .text_under{
     color: rgb(0, 0, 0);
-    font-family: 'Stem', sans-serif;
-    font-size: 20px;
+    font-size: 17px;
     font-weight: 350;
     line-height: 130%;
     letter-spacing: 0%;
@@ -86,7 +83,6 @@
     background-image: url('../../public/img/task__purpose-bg.png');
     width: 55%;
     color: rgb(255, 255, 255);
-    font-family: 'Stem' sans-serif;
     font-size: 20px;
     font-weight: 350;
     line-height: 130%;
@@ -95,7 +91,6 @@
 }
 
 .item h1{
-    font-family: 'Stem' sans-serif;
     font-size: 40px;
     font-weight: 700;
     line-height: 120%;
@@ -107,7 +102,6 @@
     background-image: url('../../public/img/task__purpose-bg--asset.png');
     width: 45%;
     color: rgb(255, 255, 255);
-    font-family: 'Stem' sans-serif;
     font-size: 20px;
     font-weight: 350;
     line-height: 130%;
@@ -116,7 +110,6 @@
 }
 
 .items h1{
-    font-family: 'Stem' sans-serif;
     font-size: 40px;
     font-weight: 700;
     line-height: 120%;

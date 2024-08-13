@@ -1,7 +1,6 @@
-import AssessmentOfBrand from "@/AssessmentOfBrand/AssessmentOfBrand";
-import Content from "@/Content/Content";
 import Header from "@/Header/Header";
 import Researches from "@/Researches/Researches";
+import Content from "@/Content/Content";
 
 export default function Home() {
   return (
@@ -9,7 +8,7 @@ export default function Home() {
       <Header/>
       <Researches/>
       <Content/>
-      <AssessmentOfBrand/>
+      {/*<AssessmentOfBrand/> */}
     </div>
   );
 }

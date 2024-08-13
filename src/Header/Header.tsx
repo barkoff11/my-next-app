@@ -37,13 +37,13 @@ const Header: React.FC = () => {
                         <li><a href="#">О компании</a></li>
                         <li><a href="#">Решения</a></li>
                         <li><a href="#">Методы</a></li>
-                        <li><a href="#">Пример исследований</a></li>
+                        <li><a href="#">Примеры исследований</a></li>
                         <li><a href="#">Новости</a></li>
                         <li><a href="#">Контакты</a></li>
                     </ul>
                 <div className={`${styles.burger_icon} ${isMenuActive ? styles.burger_active : ''}`} onClick={toggleMenu}>
         <svg>
-            <use xlinkHref={`${BASE_PATH}/img/sprite.svg#${isMenuActive ? 'header__menu-close' : 'header__menu-open'}`}></use>
+            <use xlinkHref={`${BASE_PATH}/img/sprite.svg#header__menu-open`}></use>
         </svg>
     </div>
                 </nav>

@@ -1,0 +1,44 @@
+@use 'variables' as *;
+
+  @mixin viewport--m {
+    @media (max-width: ($m-width)) {
+      @content;
+    }
+  }
+  
+  @mixin viewport--s {
+    @media (max-width: ($s-width)) {
+      @content;
+    }
+  }
+  
+  @mixin viewport--xs {
+    @media (max-width: ($xs-width)) {
+      @content;
+    }
+  }
+  
+  @mixin viewport($size) {
+    @media (max-width: $size) {
+      @content;
+    }
+  }
+
+  @mixin container {
+    width: $m-width;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0px;
+    padding-right: 0px;
+
+    @include viewport--m {
+      width: $s-width;
+    }
+  
+    @include viewport--s {
+      width: 100%;
+      min-width: $xs-width;
+    }
+  }
+  
+  

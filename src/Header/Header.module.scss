@@ -1,57 +1,37 @@
-.container {
+@import '@/styles/mixin.scss';
+@import '@/styles/variables.scss';
+
+.container{
+    @include container;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    width: 65%;
-    margin: auto;
+}
+
+.logo svg{
     position: relative;
-    z-index: 1;
-    padding-bottom: 75px;
+    width: 120px;
+    height: 67px;
 }
 
 .menu{
+    list-style: none;
     display: flex;
-    margin-left: 143px;
     padding: 0;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 350;
     letter-spacing: 0%;
     text-align: left;
 }
 
-.menu li:nth-child(1) { /* "О компании" */
-    margin-right: 50px;
+.menu a{
+    padding: 0 16px 0 26px;
+    list-style: none;
+    color: black;
 }
 
-.menu li:nth-child(2) { /* "Решения" */
-    margin-right: 38px;
-}
 
-.menu li:nth-child(3) { /* "Методы" */
-    margin-right: 50px;
-}
 
-.menu li:nth-child(4) { /* "Примеры исследований" */
-    margin-right: 51px;
-}
-
-.menu li:nth-child(5) { /* "Новости" */
-    margin-right: 52px;
-}
-
-.menu li:nth-child(6) { /* "Контакты" */
-    margin-right: 33px; 
-}
-
-.logo{
-    padding: 1px 0 0 57px;
-}
-
-.logo svg{
-    position: relative;
-    width: 140px;
-    height: 75px;
-}
 
 .container::before {
     content: '';

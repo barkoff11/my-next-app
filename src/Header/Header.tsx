@@ -42,10 +42,10 @@ const Header: React.FC = () => {
                         <li><a href="#">Контакты</a></li>
                     </ul>
                 <div className={`${styles.burger_icon} ${isMenuActive ? styles.burger_active : ''}`} onClick={toggleMenu}>
-        <svg>
-            <use xlinkHref={`${BASE_PATH}/img/sprite.svg#header__menu-open`}></use>
-        </svg>
-    </div>
+                    <svg>
+                        <use xlinkHref={`${BASE_PATH}/img/sprite.svg#header__menu-open`}></use>
+                    </svg>
+                </div>
                 </nav>
                 <div className={styles.circle}></div>
         </div>

@@ -7,13 +7,13 @@
   }
   
   @mixin viewport--s {
-    @media (max-width: ($s-width)) {
+    @media (max-width: ($xs-width)) {
       @content;
     }
   }
   
   @mixin viewport--xs {
-    @media (max-width: ($xs-width)) {
+    @media (max-width: ($xxs-width)) {
       @content;
     }
   }
@@ -31,13 +31,15 @@
     padding-left: 15px;
     padding-right: 15px;
     
-    @include viewport--m {
-      width: $s-width;
+    @include viewport--s {
+      width: $xs-width;
+      padding-left: 15px;
+      padding-right: 15px;
     }
   
-    @include viewport--s {
+    @include viewport--xs {
       width: 100%;
-      min-width: $xs-width;
+      min-width: $xxs-width;
     }
   }
   

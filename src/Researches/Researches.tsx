@@ -13,7 +13,7 @@ const Researches = () => {
     if (buttonRef.current) {
         const screenWidth = window.innerWidth; // Получаем ширину окна
 
-        if (screenWidth < 960) { // Задаем пороговое значение ширины
+        if (screenWidth < 1100) { // Задаем пороговое значение ширины
             setButtonText('Примеры');
         } else {
             setButtonText('Примеры исследований');
@@ -37,14 +37,14 @@ const Researches = () => {
                 <div className={styles.imageColumn}>
 
                     <div className={styles.content}>
-                        <svg className={styles.svg}>
+                        <svg className={styles.svgOne}>
                             <use xlinkHref={`${BASE_PATH}/img/sprite.svg#company__benefit--data`}></use>
                         </svg>
                         Данные для маркетинговых исследований собираются в строгом соответствии с целями и задачами заказчика
                     </div>
                     
                     <div className={styles.content}>
-                        <svg className={styles.svg}>
+                        <svg className={styles.svgTwo}>
                             <use xlinkHref={`${BASE_PATH}/img/sprite.svg#company__benefit--staff`}></use>
                         </svg>
                         Наши специалисты проводят достоверные и точные исследования рынка

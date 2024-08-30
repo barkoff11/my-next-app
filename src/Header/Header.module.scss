@@ -6,15 +6,25 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    padding-top: 20px;
+}
+
+.navigation{
+    display: flex;
+    align-items: center;
+    margin-left: auto;
 }
 
 .logo svg{
     position: relative;
-    width: 120px;
-    height: 67px;
+    width: 160px;
+    height: 26px;
 }
 
 .menu{
+    align-items: center;
+    position: relative;
+    z-index: 1;
     list-style: none;
     display: flex;
     padding: 0;
@@ -22,10 +32,11 @@
     font-weight: 350;
     letter-spacing: 0%;
     text-align: left;
+    gap: 50px;
 }
 
 .menu a{
-    padding: 0 16px 0 26px;
+    font-size: 16px;
     list-style: none;
     color: black;
 }
@@ -36,12 +47,12 @@
 .container::before {
     content: '';
     position: absolute;
-    top: -225px;
-    right: -186px;
-    width: 560px;
-    height: 595px;
+    top: -228px;
+    right: 122px;
+    width: 639px;
+    height: 639px;
     border-radius: 50%; 
-    border: 70px solid #F5F9F7; 
+    border: 80px solid #F5F9F7; 
     z-index: -1; 
 }
 

@@ -1,26 +1,25 @@
-.container {
+@import '@/styles/mixin.scss';
+@import '@/styles/variables.scss';
+
+.container{
+    @include container;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    width: 58%;
-    margin: auto;
-    position: relative;
-    z-index: 1;
-    padding-bottom: 146px;
+    padding-top: 66px;
 }
 
 .text{
-    width: 630px;
+    width: 650px;
     position: relative;
-	font-size: 40px;
+	font-size: 45px;
     font-weight: 700;
     margin-bottom: 23px;
 }
 
 .text_under{
     position: relative;
-    width: 530px;
-    font-size: 17px;
+    font-size: 20px;
     font-weight: 350;
 }
 
@@ -28,12 +27,19 @@
     flex: 1;
 }
 
+.buttonContainer{
+    display: flex;
+    gap: 5px;
+    margin-top: 54px;
+}
+
 .buttonOne{
-    padding: 12px 43px;
+    padding: 13px 0;
+    width: 271px;
     border-radius: 50px;
     margin: 15px 11px 15px 0px;
     color: rgb(255, 255, 255);
-    font-size: 13px;
+    font-size: 16px;
     letter-spacing: 0%;
     text-align: center;
     border: 2px solid rgb(61, 133, 104);
@@ -42,55 +48,53 @@
 
 
 .buttonTwo{
-    padding: 12px 41px;
+    padding: 13px 0;
+    width: 271px;
     border-radius: 50px;
     margin: 15px 25px;
     color: rgb(61, 133, 104);
-    font-size: 13px;
+    font-size: 16px;
     letter-spacing: 0%;
     text-align: center;
     border: 3px solid rgb(61, 133, 104);
 }
 
 .imageColumn {
+    margin-top: 50px;
     display: flex;
-    align-self: flex-end;
+    gap: 60px;
 }
 
 .svg{
-    margin: 0 20px 0 8px;
-    width: 50px;
+    margin: 0 20px 0 4px;
+    width: 80px;
     height: 30px;
 }
 
 .content{
     display: flex;
     color: rgb(0, 0, 0);
-    font-size: 12px;
+    font-size: 13px;
     letter-spacing: 0%;
-    margin: 46px -10px;
+    margin: 0 0;
     position: relative;
-}
-
-.content:nth-child(1){
-    margin-right: 8px;
 }
 
 .image {
-    right: 74px;
-    top: -13px;
+    right: 27px;
+    top: 6px;
     position: relative;
-    height: 441px;
-    width: 559px;
+    height: 495px;
+    width: 639px;
     z-index: 1;
 }
 
 .container::before {
     content: '';
-    top: -102px;
-    left: 706px;
-    width: 800px;
-    height: 800px;
+    top: 57px;
+    right: -192px;
+    width: 900px;
+    height: 900px;
     border-radius: 50%;
     border: 80px solid #4a9781;
     position: absolute;

@@ -32,7 +32,7 @@ const Header: React.FC = () => {
             <use xlinkHref={`${BASE_PATH}/img/sprite.svg#header__logo`}></use>
               </svg>
             </div>
-                 <nav className={`${isMenuActive ? styles.blur : ''}`}>
+                 <nav className={`${isMenuActive ? styles.blur : styles.navigation}`}>
                     <ul className={`${styles.menu} ${isMenuActive ? styles.menu_active : ''}`}>
                         <li><a href="#">О компании</a></li>
                         <li><a href="#">Решения</a></li>

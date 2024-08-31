@@ -64,7 +64,7 @@
     gap: 60px;
 }
 
-.svg{
+.svgOne, .svgTwo{
     margin: 0 20px 0 4px;
     width: 80px;
     height: 30px;
@@ -188,10 +188,6 @@
         position: relative;
     }
 
-    .content:nth-child(2){
-        margin: 0 0 0 -16px;
-    }
-
     .image{
     width: 689px;
     height: 533px;
@@ -214,47 +210,78 @@
 
 @media (max-width: 320px) {
     .container {
+        width: 320px;
+        padding-left: 15px;
+        padding-right: 15px;
         display: flex;
-        justify-content: space-evenly;
         align-items: center;
-        width: 85%;
-        margin: auto;
         position: relative;
         z-index: 1;
         padding-bottom: 70px;
     }
     
     .text{
-        width: 250px;
+        width: 320px;
         position: relative;
-        font-size: 24px;
+        font-size: 29px;
         font-weight: 700;
-        margin-bottom: 31px;
+        margin: 2px 0px 0 0;
     }
     
     .text_under{
         position: relative;
-        width: 250px;
-        font-size: 15px;
-        margin-bottom: 27px;
+        width: 310px;
+        font-size: 18px;
+        margin: 33px 0 27px 0;
         font-weight: 350;
     }
     
     .textColumn {
         flex: 1;
     }
+    
+    .imageColumn {
+        width: 300px;
+        display: flex;
+        gap: 30px;
+        align-self: flex-end;
+        flex-wrap: wrap;
+        margin-bottom: 280px;
+    }
+    
+    .svgOne{
+        margin: 5px 25px 0 0px;
+        width: 94px;
+        height: 27px;
+    }
+
+    .svgTwo{
+        margin: 0px 21px 0 0;
+        width: 70px;
+        height: 35px;
+    }
+
+    .content{
+        display: flex;
+        color: rgb(0, 0, 0);
+        font-size: 14px;
+        line-height: 127%;
+        position: relative;
+    }
 
     .buttonContainer{
         display: flex;
         flex-direction: column-reverse;
+        margin: 0;
     }
     
     .buttonOne{
-        padding: 12px 43px;
+        width: 290px;
+        padding: 14px 18px;
         border-radius: 50px;
-        margin: 13px 3px 15px 0px;
+        margin: 11px 3px 15px 0px;
         color: rgb(255, 255, 255);
-        font-size: 13px;
+        font-size: 17px;
         letter-spacing: 0%;
         text-align: center;
         border: 2px solid rgb(61, 133, 104);
@@ -263,61 +290,36 @@
     
     
     .buttonTwo{
-        padding: 9px 18px;
+        width: 290px;
+        padding: 12px 18px;
         border-radius: 50px;
-        margin: 62px 3px 0px 0px;
+        margin: 35px 3px 0px 0px;
         color: rgb(61, 133, 104);
-        font-size: 13px;
+        font-size: 17px;
         letter-spacing: 0%;
         text-align: center;
         border: 3px solid rgb(61, 133, 104);
     }
-    
-    .imageColumn {
-        width: 230px;
-        display: flex;
-        align-self: flex-end;
-        flex-wrap: wrap;
-        margin-bottom: 209px;
-    }
-    
-    .svg{
-        margin: 0px 22px 0 9px;
-        width: 87px;
-        height: 27px;
-    }
 
-    .content{
-        display: flex;
-        color: rgb(0, 0, 0);
-        font-size: 11px;
-        line-height: 15px;
-        margin: 9px -10px;
+
+
+    .image{
+        display: block;
+        width: 320px;
+        height: 255px;
+        right: 318px;
+        top: 219px;
         position: relative;
+        z-index: 10;
     }
 
-    .content:nth-child(2) {
-        margin: 13px 0 0 -24px;
+    .container::before {
+        top: 43px;
+        left: 573px;
+        width: 800px;
+        height: 800px;
+        border-radius: 50%;
+        border: 80px solid #4a9781;
+        z-index: -2;
     }
-
-.image{
-    display: block;
-    width: 270px;
-    height: 212px;
-    right: 0px;
-    left: -261px;
-    top: 184px;
-    position: relative;
-    z-index: 10;
-}
-
-.container::before {
-    top: 43px;
-    left: 573px;
-    width: 800px;
-    height: 800px;
-    border-radius: 50%;
-    border: 80px solid #4a9781;
-    z-index: -2;
-}
 }

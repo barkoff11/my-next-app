@@ -13,7 +13,7 @@ const Researches = () => {
     if (buttonRef.current) {
         const screenWidth = window.innerWidth; // Получаем ширину окна
 
-        if (screenWidth < 1100) { // Задаем пороговое значение ширины
+        if (screenWidth < 1100 && screenWidth > 320) { // Задаем пороговое значение ширины
             setButtonText('Примеры');
         } else {
             setButtonText('Примеры исследований');

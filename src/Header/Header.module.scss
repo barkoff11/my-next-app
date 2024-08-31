@@ -149,17 +149,15 @@
    
 @media (max-width: 320px) {
     .container{
-        width: 100%;
-        margin: auto;
+        width: 320px;
+        margin-left: 1px;
+        margin-right: 1px;
         z-index: 10;
-        margin-bottom: -8px;
+        margin-top: 13px;
     }
 
     .logo {
         transition: transform 0.9s ease, color 0.3s ease; 
-        color: black; 
-        height: 12px;
-        width: 90px;
         z-index: 10;
     }
     
@@ -170,9 +168,8 @@
     }
 
     .logo svg{
-        padding-left: 30px;
-        width: 135px;
-        height: 73px;
+        width: 120px;
+        height: 20px;
     }
     
     .blur {
@@ -187,17 +184,15 @@
     }
 
     .burger_icon{
-        top: 31px;
         display: block;
-        left: 27px;
         position: relative;
         cursor: pointer;
         z-index: 10;
     }
 
     .burger_icon svg{
-        width: 15px;
-        height: 12px;
+        width: 18px;
+        height: 14px;
     }
     
     .menu{

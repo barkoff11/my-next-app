@@ -1,6 +1,9 @@
 import Header from "@/Header/Header";
 import Researches from "@/Researches/Researches";
 import Content from "@/Content/Content";
+import AssessmentOfBrand from "@/AssessmentOfBrand/AssessmentOfBrand"
+import Methods from "@/Methods/Methods";
+import Examples from "@/Examples/Examples";
 
 export default function Home() {
   return (
@@ -8,7 +11,9 @@ export default function Home() {
       <Header/>
       <Researches/>
       <Content/>
-      {/*<AssessmentOfBrand/> */}
+      <AssessmentOfBrand/>
+      <Methods/>
+      <Examples/>
     </div>
   );
 }

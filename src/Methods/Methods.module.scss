@@ -1,0 +1,124 @@
+@import '@/styles/mixin.scss';
+@import '@/styles/variables.scss';
+
+.container {
+    @include container;
+    position: relative;
+    margin-top: 158px;
+}
+
+.wrapper h1{
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.menu {
+    margin-top: 37px;
+    display: grid;
+    grid-template-columns: repeat(3, 350px); /* 3 колонки */
+    grid-auto-rows: minmax(95px, 120px);
+    row-gap: 20px;
+    column-gap: 31px;
+}
+
+
+
+.content {
+    display: flex; /* Используем flexbox для размещения иконки и текста */
+    align-items: center; /* Центрируем по вертикали */
+    font-size: 20px;
+    border: 1px solid #ccc; /* Добавляем границу для визуализации ячеек */
+    border-radius: 20px; /* Скругляем углы */
+    text-decoration: none; /* Убираем подчеркивание у ссылок */
+    padding: 20px 10px;
+}
+
+.content svg{
+    width: 70px;
+    height: 40px;
+    margin-left: 13px;
+    margin-right: 20px;
+}
+
+.one{
+    background-color: #3D8568;
+    color: #fff;
+}
+
+.one svg{
+    width: 70px;
+    height: 40px;
+}
+
+.two {
+    grid-column: span 1; /* Оставляем 1 колонку */
+    grid-row: span 2; /* Объединяем по вертикали на 2 строки */
+    width: 350px;
+    height: 245px;
+}
+
+.thore{
+    grid-column: 2;
+    height: 95px;
+}
+
+.thore svg{
+    margin-right: 3px;
+    margin-left: 5px;
+}
+
+.three{
+    grid-column: 3;
+    height: 95px;
+}
+
+.three svg{
+    width: 47px;
+    height: 40px;
+    margin-right: 17px;
+}
+
+.five{
+    height: 95px;
+    background-color: #3D8568;
+    color: #fff;
+}
+
+.five svg{
+    margin-right: 3px;
+    margin-left: 5px;
+}
+
+.six {
+    grid-column: span 2; /* Объединяем по горизонтали на 2 колонки */
+    grid-column: 2;
+    height: 95px;
+    width: 731px;
+}
+
+.six svg{
+    margin-left: 4px;
+  margin-right: 5px;
+}
+
+.text{
+    margin-top: 15px;
+    width: 700px;
+}
+
+.text_under{
+    margin: 22px 0;
+    width: 740px;
+}
+
+.image{
+    top: 10px;
+    right: 172px;
+    position: relative;
+    z-index: 10;
+}
+
+.image img{
+    width: 524px;
+    height: auto;
+}

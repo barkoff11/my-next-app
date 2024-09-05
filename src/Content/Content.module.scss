@@ -1,12 +1,12 @@
+@import '@/styles/mixin.scss';
+@import '@/styles/variables.scss';
+
 .container {
+    @include container;
     display: flex;
     align-items: flex-start;
-    width: 58%;
-    margin: auto;
-    max-width: 1900px;
-    min-width: 800px;
-    margin: auto;
     position: relative;
+    padding-top: 170px;
 }
 
 .content{
@@ -14,35 +14,30 @@
     flex-direction: column;
     height: auto;
     border-radius: 20px;
-    padding: 35px 45px 35px 40px;
-    margin: 20px;
+    padding: 35px 40px;
+    width: 350px;
+    height: 240px;
+    margin-top: 32px;
     background: rgb(245, 245, 245);
     font-size: 16px;
     font-weight: 350;
     line-height: 130%;
-    letter-spacing: 0%;
     text-align: left;
 }
 
 
 
-
-.contentList{
-    display: flex;
-	font-size: 16px;
-	font-weight: 500;
-}
-
 .contentList svg{
-    width: 30px;
-    height: 30px;
+    width: 45px;
+    height: 45px;
+    margin-bottom: 15px;
 }
 
 
 .text{
     color: rgb(0, 0, 0);
-    font-size: 33px;
-    margin-bottom: 21px;
+    font-size: 36px;
+    margin-bottom: 24px;
     font-weight: 700;
     line-height: 120%;
     letter-spacing: 0%;
@@ -51,37 +46,37 @@
 
 .text_under{
     color: rgb(0, 0, 0);
-    font-size: 17px;
+    font-size: 20px;
     font-weight: 350;
     line-height: 130%;
     letter-spacing: 0%;
     text-align: left;
 }
 
-.textColumn {
-    flex: 1;
+.column{
+    display: flex;
+    gap: 30px;
 }
 
-.column{
-    margin: 30px 10px;
+.contentList{
     display: flex;
-    flex-direction: row;
+    gap: 30px;
 }
 
 .item, .items{
     list-style-type: none; /* Убираем маркеры списка */
-    padding: 50px 40px 20px 40px;
+    padding: 20px 10px 20px 50px;
     background-size: cover; /* Размер фона */
     background-position: center;
-    border-radius: 25px;
-    margin: 10px; /* Отступ между элементами списка */
+    border-radius: 20px;
     color: white;
+    margin-top: 120px;
     height: 210px;
 }
 
 .item {
     background-image: url('../../public/img/task__purpose-bg.png');
-    width: 55%;
+    width: 635px;
     color: rgb(255, 255, 255);
     font-size: 20px;
     font-weight: 350;
@@ -94,13 +89,13 @@
     font-size: 40px;
     font-weight: 700;
     line-height: 120%;
-    letter-spacing: 0%;
+    margin: 25px 0 20px 0px;
     text-align: left;
 }
 
 .items{
     background-image: url('../../public/img/task__purpose-bg--asset.png');
-    width: 45%;
+    width: 445px;
     color: rgb(255, 255, 255);
     font-size: 20px;
     font-weight: 350;
@@ -113,6 +108,210 @@
     font-size: 40px;
     font-weight: 700;
     line-height: 120%;
-    letter-spacing: 0%;
+    margin: 25px 0 20px 0px;
     text-align: left;
+}
+
+@include viewport--m {
+    .container {
+        width: 720px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+        padding-bottom: 50px;
+        padding-top: 100px;
+    }
+
+    .text{
+        width: 450px;
+        position: relative;
+        font-size: 36px;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    .text_under{
+        position: relative;
+        width: 560px;
+        font-size: 20px;
+        margin-bottom: 2px;
+        line-height: 130%;
+        font-weight: 350;
+    }
+
+    .column{
+        display: flex;
+        gap: 30px;
+    }
+    
+    .contentList{
+        display: flex;
+        gap: 30px;
+    }
+
+    .content{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        border-radius: 20px;
+        padding: 30px;
+        width: 210px;
+        height: 330px;
+        margin-top: 32px;
+        background: rgb(245, 245, 245);
+        font-size: 16px;
+        font-weight: 350;
+        line-height: 130%;
+        text-align: left;
+    }
+
+    .item, .items{
+        list-style-type: none; 
+        padding: 10px 21px 20px 40px;
+        background-size: cover;
+        background-position: center;
+        border-radius: 20px;
+        color: white;
+        margin-top: 120px;
+        height: 270px;
+    }
+    
+    .item {
+        background-image: url('../../public/img/task__purpose-bg.png');
+        width: 390px;
+        color: rgb(255, 255, 255);
+        font-size: 18px;
+        font-weight: 350;
+        line-height: 130%;
+        letter-spacing: 0%;
+        text-align: left;
+    }
+    
+    .item h1{
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 120%;
+        margin: 25px 0 20px 0px;
+        text-align: left;
+    }
+    
+    .items{
+        background-image: url('../../public/img/task__purpose-bg--asset.png');
+        width: 270px;
+        color: rgb(255, 255, 255);
+        font-size: 18px;
+        font-weight: 350;
+        line-height: 130%;
+        letter-spacing: 0%;
+        text-align: left;
+    }
+    
+    .items h1{
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 120%;
+        margin: 25px 0 20px 0px;
+        text-align: left;
+    }
+}
+
+@include viewport--s {
+    .container{
+        width: 320px;
+        padding-left: 15px;
+        padding-right: 15px;
+        z-index: 10;
+        padding-top: 53px;
+    }
+
+    .text{
+        width: 310px;
+        position: relative;
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    .text_under{
+        position: relative;
+        width: 300px;
+        font-size: 20px;
+        margin-bottom: 2px;
+        line-height: 130%;
+        font-weight: 350;
+    }
+
+    .column{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .contentList{
+        display: flex; 
+        gap: 30px;
+    }
+
+    .content{
+        display: flex;
+        flex-direction: column;
+        border-radius: 20px;
+        padding: 30px;
+        width: 250px;
+        height: 240px;
+        margin-top: 32px;
+        background: rgb(245, 245, 245);
+        font-size: 14px;
+        line-height: 130%;
+        text-align: left;
+    }
+
+    .item, .items{
+        list-style-type: none; 
+        padding: 10px 21px 20px 42px;
+        background-size: cover;
+        background-position: center;
+        border-radius: 20px;
+        color: white;
+        
+    }
+    
+    .item {
+        background-image: url('../../public/img/task__purpose-bg.png');
+        width: 291px;
+        height: 314px;
+        color: rgb(255, 255, 255);
+        font-size: 18px;
+        line-height: 130%;
+        margin-top: 140px;
+        text-align: left;
+    }
+    
+    .item h1{
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 120%;
+        margin: 25px 0 20px 0px;
+        text-align: left;
+    }
+    
+    .items{
+        background-image: url('../../public/img/task__purpose-bg--asset.png');
+        width: 291px;
+        height: 230px;
+        color: rgb(255, 255, 255);
+        font-size: 18px;
+        font-weight: 350;
+        line-height: 130%;
+        margin-top: 1px;
+        text-align: left;
+    }
+    
+    .items h1{
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 120%;
+        margin: 25px 0 20px 0px;
+        text-align: left;
+    }
 }

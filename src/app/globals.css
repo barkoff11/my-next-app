@@ -1,4 +1,7 @@
-@import '../../public/fonts/fonts.css';
+@import url('../../public/fonts/fonts.css');
+@import 'slick-carousel/slick/slick.css';
+@import 'slick-carousel/slick/slick-theme.css';
+
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -15,7 +18,7 @@
 }
 
 body {
-  font-family: 'Stem' sans-serif;
+  font-family: 'Stem', sans-serif;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -46,6 +49,7 @@ img {
 
 a,
 button {
+  font-family: "Stem" sans-serif;
   text-decoration: none;
   transition: 0.3s;
 
@@ -55,8 +59,11 @@ button {
 }
 
 body {
-  font-family: "Stem" sans-serif;
   margin: 0;
   font-weight: normal;
   line-height: 1.25;
+}
+
+h1 {
+  font-family: 'Stem', sans-serif;
 }

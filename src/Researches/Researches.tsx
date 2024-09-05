@@ -57,7 +57,6 @@ const Researches = () => {
         
     </div>
     <img src={`${BASE_PATH}/img/company__bg.png`} className={styles.image}/>
-    <div className={styles.circle}></div>
 </div>
 
 );

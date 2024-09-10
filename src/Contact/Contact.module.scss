@@ -1,0 +1,147 @@
+@import '@/styles/mixin.scss';
+@import '@/styles/variables.scss';
+
+.container {
+    @include container;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: relative;
+    margin-top: 158px;
+}
+
+.warp {
+    flex: 1; /* Занимает все доступное пространство */
+    display: flex;
+    flex-direction: column; /* Вертикальное расположение содержимого */
+}
+
+.warp h1{
+    color: rgb(0, 0, 0);
+    font-size: 40px;
+    width: 450px;
+    font-weight: 700;
+    line-height: 121%;
+    margin: 25px 0 20px 0;
+    text-align: left;
+}
+
+.text{
+    font-size: 20px;
+}
+
+
+
+.contentList{
+    display: flex;
+    width: 445px;
+    height: 183px;
+    margin-top: 25px;
+    font-size: 20px;
+    text-align: left;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.content{
+    font-size: 16px;
+    margin-bottom: 23px;
+}
+
+.content svg{
+    width: 14px;
+    height: 14px;
+    margin-right: 17px;
+}
+
+.buttonOne{
+    width: 203px;
+    height: 50px;
+    border-radius: 50px;
+    margin-top: auto;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    text-align: center;
+    border: 2px solid rgb(61, 133, 104);
+    background-color: rgb(61, 133, 104);
+}
+
+.image{
+    position: absolute;
+  width: 575px;
+  height: 399px;
+  left: 650px;
+  top: 25px;
+  border-radius: 20px;
+}
+
+@include viewport--m{
+    .container{
+        margin-top: 114px;
+    }
+
+    .warp {
+        flex: 1; /* Занимает все доступное пространство */
+        display: flex;
+        flex-direction: column; /* Вертикальное расположение содержимого */
+    }
+    
+    .warp h1{
+        color: rgb(0, 0, 0);
+        font-size: 36px;
+        width: 200px;
+        font-weight: 700;
+        line-height: 121%;
+        margin: 25px 0 20px 0;
+        text-align: left;
+    }
+    
+    .text{
+        font-size: 20px;
+        width: 315px;
+    }
+    
+    .contentList{
+        display: flex;
+        width: 445px;
+        height: 170px;
+        margin-top: 25px;
+        font-size: 20px;
+        text-align: left;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    
+    .content{
+        font-size: 15px;
+        margin-bottom: 13px;
+    }
+    
+    .content svg{
+        width: 12px;
+        height: 19px;
+        margin-right: 21px;
+    }
+    
+    .buttonOne{
+        width: 203px;
+        height: 50px;
+        border-radius: 50px;
+        margin-top: auto;
+        color: rgb(255, 255, 255);
+        font-size: 16px;
+        text-align: center;
+        border: 2px solid rgb(61, 133, 104);
+        background-color: rgb(61, 133, 104);
+    }
+    
+    .image{
+        position: absolute;
+        width: 372px;
+        height: 402px;
+        left: 434px;
+        top: 25px;
+        border-radius: 20px;
+    }
+}

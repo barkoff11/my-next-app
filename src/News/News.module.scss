@@ -1,0 +1,136 @@
+@import '@/styles/mixin.scss';
+@import '@/styles/variables.scss';
+
+.container {
+    @include container;
+    position: relative;
+    margin-top: 183px;
+}
+
+.container h1{
+    font-size: 40px;
+    margin: 0px 10px 8px 0px;
+}
+
+.text{
+    font-size: 16px;
+}
+
+.text_under{
+    display: flex;
+    align-items: flex-end;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    margin-top: 1px;
+    gap: 30px; 
+}
+
+.example {
+    display: flex;
+    flex-direction: column; /* Устанавливаем направление по вертикали */
+    justify-content: space-between;
+    background-color: #F5F5F5; 
+    font-size: 14px;
+    padding: 29px 40px 33px 40px; 
+    line-height: 150%;
+    border-radius: 20px; 
+    width: 255px;
+    height: 323px;
+    margin-top: 21px;
+}
+
+@include viewport--m{
+    .container{
+        position: relative;
+        margin-top: 110px;
+    }
+    
+    .container h1{
+        font-size: 36px;
+        margin: 0px 10px 8px 0px;
+    }
+    
+    .text{
+        font-size: 15px;
+    }
+    
+    .text_under{
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .text_under h1{
+        font-size: 40px;
+    }
+    
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); 
+        margin-top: 1px;
+        gap: 30px; 
+    }
+    
+    .example {
+        display: flex;
+        flex-direction: column; /* Устанавливаем направление по вертикали */
+        justify-content: space-between;
+        background-color: #F5F5F5; 
+        font-size: 14px;
+        padding: 30px 40px 33px 30px;
+        line-height: 133%;
+        border-radius: 20px; 
+        width: 210px;
+        height: 321px;
+        margin-top: 13px;
+    }
+}
+
+@include viewport--xs {
+    .container{
+        position: relative;
+        margin-top: 128px;
+    }
+    
+    .container h1{
+        font-size: 36px;
+        margin: 0px 10px 8px 0px;
+    }
+    
+    .text{
+        font-size: 15px;
+    }
+    
+    .text_under{
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .text_under h1{
+        font-size: 40px;
+    }
+    
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); 
+        margin-top: 1px;
+        gap: 30px; 
+    }
+    
+    .example {
+        display: flex;
+        flex-direction: column; /* Устанавливаем направление по вертикали */
+        justify-content: space-between;
+        background-color: #F5F5F5; 
+        font-size: 14px;
+        padding: 30px 40px 33px 30px;
+        line-height: 133%;
+        border-radius: 20px; 
+        width: 210px;
+        height: 321px;
+        margin-top: 13px;
+    }
+}
+

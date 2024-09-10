@@ -31,7 +31,7 @@
     padding-left: 15px;
     padding-right: 15px;
     
-    @include viewport--s {
+    @include viewport--m {
       width: $xs-width;
       padding-left: 15px;
       padding-right: 15px;

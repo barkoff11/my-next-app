@@ -33,7 +33,6 @@ const Methods = () => {
         </svg>
         Тайный покупатель (Mystery Shopping) 
     </a>
-    <img src={`${BASE_PATH}/img/method__bg.png`} className={styles.image} alt="Background" />
     <a className={`${styles.content} ${styles.three}`}>
         <svg>
             <use xlinkHref={`${BASE_PATH}/img/sprite.svg#methods__item--oa`}></use>
@@ -59,7 +58,7 @@ const Methods = () => {
         Исследование фокус-групп (FGD) 
     </a>
 </div>
-            
+<img src={`${BASE_PATH}/img/method__bg.png`} className={styles.image} alt="Background" />
         </div>
     );
 };

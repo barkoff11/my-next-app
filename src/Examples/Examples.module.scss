@@ -18,8 +18,7 @@
 
 .wrapper {
     display: flex; /* Располагаем элементы в строку */
-    justify-content: space-between; /* Разделяем элементы */
-    align-items: flex-start; /* Выравниваем по верхнему краю */
+    gap: 30px;
 }
 
 .content{
@@ -56,12 +55,27 @@
     width: 203px;
     height: 50px;
     border-radius: 50px;
-    margin: 10px 0px 15px 23px;
+    margin: 10px 0px 15px 0px;
     color: rgb(61, 133, 104);
     font-size: 17px;
     letter-spacing: 0%;
     text-align: center;
     border: 3px solid rgb(61, 133, 104);
+}
+
+.btn-one-text{
+    &--short {
+        display: none;
+    }
+
+    @include viewport(1110px) {
+    &--short{
+        display: inline;
+    }
+    &--long{
+        display: none;
+    }
+}
 }
 
 .buttonTwo{
@@ -203,7 +217,7 @@
         position: relative;
         z-index: 1;
         padding-bottom: 50px;
-        margin-top: 222px;
+        margin-top: 404px;
     }
 
     .container h1{

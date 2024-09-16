@@ -20,6 +20,7 @@
     position: relative;
     font-size: 20px;
     font-weight: 350;
+    width: 606px;
 }
 
 .textColumn {
@@ -30,6 +31,7 @@
     display: flex;
     gap: 5px;
     margin-top: 54px;
+    width: 660px;
 }
 
 .buttonOne{
@@ -62,6 +64,7 @@
     margin-top: 50px;
     display: flex;
     gap: 60px;
+    width: 680px;
 }
 
 .svgOne, .svgTwo{
@@ -80,9 +83,9 @@
 }
 
 .image {
-    right: 27px;
-    top: 6px;
-    position: relative;
+    right: 255px;
+    top: 161px;
+    position: absolute;
     height: 495px;
     width: 639px;
     z-index: 1;
@@ -193,7 +196,7 @@
     height: 533px;
     top: -26px;
     right: 78px;
-    position: relative;
+    position: absolute;
     z-index: 10;
     }
 

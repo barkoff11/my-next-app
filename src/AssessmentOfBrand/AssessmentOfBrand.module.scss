@@ -21,11 +21,27 @@
 }
 
 .scrollable {
-    width: 560px;
-    height: 440px;
-    overflow-y: auto;
     padding: 10px 0px 10px 45px;
+    max-width: 560px;
+    height: 440px; /* Задайте нужную высоту */
+    overflow-y: scroll; /* Включаем вертикальную прокрутку */
+    scrollbar-width: thin; /* Для Firefox */
+    scrollbar-color: green rgba(0, 0, 0, 0.5); /* Цвет скролла и фона */
 }
+
+.scrollable::-webkit-scrollbar {
+    width: 8px; /* Ширина скролла */
+}
+
+.scrollable::-webkit-scrollbar-thumb {
+    background-color: green; /* Цвет скролла */
+    border-radius: 10px; /* Закругление углов */
+}
+
+.scrollable::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.5); /* Цвет фона скролла */
+}
+
 
 .buttonOne{
     width: 238px;
@@ -37,6 +53,10 @@
     text-align: center;
     border: 2px solid rgb(61, 133, 104);
     background-color: rgb(61, 133, 104);
+}
+
+.menuTwo{
+    display: none;
 }
 
 .menu{
@@ -107,10 +127,24 @@
     }
 
     .scrollable {
-        width: 420px;
-        height: 440px;
-        overflow-y: auto;
         padding: 10px 0px 10px 45px;
+        height: 420px; /* Задайте нужную высоту */
+        overflow-y: scroll; /* Включаем вертикальную прокрутку */
+        scrollbar-width: thin; /* Для Firefox */
+        scrollbar-color: green rgba(0, 0, 0, 0.5); /* Цвет скролла и фона */
+    }
+    
+    .scrollable::-webkit-scrollbar {
+        width: 8px; /* Ширина скролла */
+    }
+    
+    .scrollable::-webkit-scrollbar-thumb {
+        background-color: green; /* Цвет скролла */
+        border-radius: 10px; /* Закругление углов */
+    }
+    
+    .scrollable::-webkit-scrollbar-track {
+        background: rgba(0, 0, 0, 0.5); /* Цвет фона скролла */
     }
     
     .buttonOne{
@@ -200,30 +234,33 @@
     }
 
     .menu{
-        display: flex;
-        flex-direction: row;
-        overflow-x: auto;
-        width: 290px;
-        height: 169px;
-        margin: 64px 0 26px 0;
+        display: none;
+    }
+
+    .menuTwo{
+        display: block;
+        width: 320px;
+        height: 168px;
+        margin: 46px 0;
         border-radius: 20px;
-        padding: 29px 0 28px 0;
+        padding: 29px 1px 28px 7px;
+        background: rgb(245, 245, 245);
         color: rgb(0, 0, 0);
         font-size: 18px;
         line-height: 110%;
         text-align: left;
     }
 
-    .menu ul{
+    .menuTwo ul{
         position: relative;
-        width: 600px; /* Общая ширина слайдера */
+        width: 700px; /* Общая ширина слайдера */
         overflow: hidden;
     }
     
-    .menu li{
+    .menuTwo li{
         display: flex;
-        min-width: 320px;
-        padding: 26px 22px;
+        width: 220px;
+        padding: 26px 39px;
     }
     
     .menu_active{
@@ -234,7 +271,33 @@
         text-align: left;
     }
     
-    .menu a {
+    .menuTwo a {
         padding-right: 12px;
+    }
+
+    .swiper-slide {
+        width: 300px; /* Установите нужную ширину */
+        height: 250px; /* Установите нужную высоту */
+    }
+
+    .custom-paginations {
+        position: absolute; /* Или relative, в зависимости от вашего макета */
+        bottom: 20px; /* Положение по вертикали */
+        left: 50%; /* Центрирование по горизонтали */
+        transform: translateX(-50%); /* Центрирование */
+        display: flex; /* Для горизонтального расположения */
+    }
+    
+    .custom-paginations .swiper-pagination-bullet {
+        width: 10px; /* Ширина точки */
+        height: 10px; /* Высота точки */
+        border-radius: 50%; /* Круглая форма */
+        margin: 0 5px; /* Отступ между точками */
+        transition: background 0.3s, width 0.3s;
+    }
+    
+    .custom-paginations .swiper-pagination-bullet{
+        --swiper-theme-color: #4a9781;
+        width: 15px; 
     }
 }

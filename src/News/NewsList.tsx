@@ -1,56 +1,44 @@
 'use client'
 
-import React, { useState } from 'react';
-import ExampleItem from './NewsItem';
+import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+import { Pagination } from 'swiper/modules';
 import styles from './News.module.scss'; // Импортируйте ваши стили
+import exampleData from './const';
+import NewsItem from './NewsItem';
 
-interface NewsItem {
-    title: string;
-    date: {
-        day: number;
-        month: string;
-        year: number;
-    };
-}
 
-const ITEMS_PER_PAGE = 3;
-
-const ExamplesList = ({ examples }: { examples: NewsItem[] }) => {
-    const [currentPage, setCurrentPage] = useState(0);
-    
-    const totalPages = Math.ceil(examples.length / ITEMS_PER_PAGE);
-    
-    const handleNext = () => {
-        if (currentPage < totalPages - 1) {
-            setCurrentPage(currentPage + 1);
-        }
-    };
-
-    const handlePrev = () => {
-        if (currentPage > 0) {
-            setCurrentPage(currentPage - 1);
-        }
-    };
-
-    const startIndex = currentPage * ITEMS_PER_PAGE;
-    const currentExamples = examples.slice(startIndex, startIndex + ITEMS_PER_PAGE);
-
+const ExamplesList = () => {
     return (
         <div className={styles.container}>
             <h1>Новости</h1>
-            <div className={styles.grid}>           
-                {currentExamples.map((example, index) => (
-                    <ExampleItem 
-                        key={index} 
-                        title={example.title} 
-                        date={example.date} 
-                    />
+            <Swiper
+                modules={[Pagination]} // Подключаем модуль пагинации
+                spaceBetween={30}       // Расстояние между слайдами
+                pagination={{ clickable: true, el: '.custom-pagination' }}
+                breakpoints={{
+                    320: {
+                        slidesPerView: 1.3,
+                    },
+                    1020: {
+                        slidesPerView: 3,
+                    },
+                    1900: {
+                        slidesPerView: 4,
+                    },
+                }}      // Показывать по одному слайду
+            >
+                {exampleData.map((newsItem, index) => (
+                    <SwiperSlide key={index}>
+                        <NewsItem date={newsItem.date} title={newsItem.title} />
+                    </SwiperSlide>
                 ))}
-            </div>
-            <div className={styles.pagination}>
-                <button onClick={handlePrev} disabled={currentPage === 0}>Назад</button>
-                <button onClick={handleNext} disabled={currentPage === totalPages - 1}>Вперед</button>
-            </div>
+            </Swiper>
+            <div className="custom-pagination"></div>
         </div>
     );
 };

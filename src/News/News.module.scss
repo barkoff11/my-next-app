@@ -37,8 +37,8 @@
     padding: 29px 40px 33px 40px; 
     line-height: 150%;
     border-radius: 20px; 
-    width: 255px;
-    height: 323px;
+    width: 175px;
+    height: 261px;
     margin-top: 21px;
 }
 
@@ -128,9 +128,39 @@
         padding: 30px 40px 33px 30px;
         line-height: 133%;
         border-radius: 20px; 
-        width: 210px;
-        height: 321px;
-        margin-top: 13px;
+        width: 140px;
+        height: 260px;
+        margin-top: 10px;
+        margin-bottom: 23px;
+    }
+
+    .custom-pagination {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    
+        .customBullet {
+            background-color: #007aff !important;
+            color: white;
+            padding: 10px;
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+            font-size: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background-color 0.3s ease;
+    
+            &:hover {
+                background-color: #ff5733 !important;
+            }
+        }
+    
+        /* Активный буллет */
+        .swiper-pagination-bullet-active {
+            background-color: #ff5733 !important;
+        }
     }
 }
 

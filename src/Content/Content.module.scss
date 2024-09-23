@@ -3,9 +3,9 @@
 
 .container {
     @include container;
-    display: flex;
     align-items: flex-start;
     position: relative;
+    overflow: hidden;
     padding-top: 170px;
 }
 
@@ -14,9 +14,9 @@
     flex-direction: column;
     height: auto;
     border-radius: 20px;
-    padding: 35px 93px 35px 40px;
-    width: 350px;
-    height: 240px;
+    padding: 35px 15px 35px 40px;
+    width: 295px;
+    height: 171px;
     margin-top: 32px;
     background: rgb(245, 245, 245);
     font-size: 16px;
@@ -27,7 +27,7 @@
 
 
 
-.contentList svg{
+.content svg{
     width: 45px;
     height: 45px;
     margin-bottom: 15px;
@@ -58,10 +58,10 @@
     gap: 30px;
 }
 
-.contentList{
-    display: flex;
-    gap: 30px;
-}
+// .contentList{
+//     display: flex;
+//     gap: 30px;
+// }
 
 .item, .items{
     list-style-type: none; /* Убираем маркеры списка */
@@ -115,7 +115,6 @@
 @include viewport--m {
     .container {
         width: 720px;
-        display: flex;
         align-items: center;
         position: relative;
         z-index: 1;
@@ -241,6 +240,10 @@
         font-weight: 350;
     }
 
+    .swiper{
+        height: 272px;
+    }
+
     .column{
         display: flex;
         flex-direction: column;
@@ -257,8 +260,8 @@
         flex-direction: column;
         border-radius: 20px;
         padding: 30px;
-        width: 250px;
-        height: 240px;
+        width: 189px;
+        height: 181px;
         margin-top: 32px;
         background: rgb(245, 245, 245);
         font-size: 14px;
@@ -314,4 +317,20 @@
         margin: 25px 0 20px 0px;
         text-align: left;
     }
+    .customs-pagination {
+        position: absolute; /* Или relative, в зависимости от вашего макета */
+        bottom: 20px; /* Положение по вертикали */
+        left: 50%; /* Центрирование по горизонтали */
+        transform: translateX(-50%); /* Центрирование */
+        display: flex; /* Для горизонтального расположения */
+      }
+      
+      .customs-pagination .swiper-pagination-bullet {
+        background: #4a9781; /* Цвет точек */
+        opacity: 0.5; /* Прозрачность */
+      }
+      
+      .customs-pagination .swiper-pagination-bullet-active {
+        background: #4a9781;
+      }
 }

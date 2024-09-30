@@ -13,6 +13,7 @@
     display: flex;
     flex-direction: column;
     height: auto;
+    transition: box-shadow 0.3s ease;
     border-radius: 20px;
     padding: 35px 15px 35px 40px;
     width: 295px;
@@ -25,7 +26,9 @@
     text-align: left;
 }
 
-
+.content:hover{
+    box-shadow: 4px 4px 20px #3D8568;
+}
 
 .content svg{
     width: 45px;
@@ -64,13 +67,14 @@
 // }
 
 .item, .items{
+    background-color: gray;
     list-style-type: none; /* Убираем маркеры списка */
     padding: 20px 10px 20px 50px;
     background-size: cover; /* Размер фона */
     background-position: center;
     border-radius: 20px;
     color: white;
-    margin-top: 120px;
+    margin-top: 119px;
     height: 210px;
 }
 
@@ -155,8 +159,8 @@
         height: auto;
         border-radius: 20px;
         padding: 30px;
-        width: 210px;
-        height: 330px;
+        width: 150px;
+        height: 270px;
         margin-top: 32px;
         background: rgb(245, 245, 245);
         font-size: 16px;
@@ -215,7 +219,7 @@
     }
 }
 
-@include viewport--s {
+@include viewport--xs {
     .container{
         width: 320px;
         padding-left: 15px;
@@ -317,20 +321,4 @@
         margin: 25px 0 20px 0px;
         text-align: left;
     }
-    .customs-pagination {
-        position: absolute; /* Или relative, в зависимости от вашего макета */
-        bottom: 20px; /* Положение по вертикали */
-        left: 50%; /* Центрирование по горизонтали */
-        transform: translateX(-50%); /* Центрирование */
-        display: flex; /* Для горизонтального расположения */
-      }
-      
-      .customs-pagination .swiper-pagination-bullet {
-        background: #4a9781; /* Цвет точек */
-        opacity: 0.5; /* Прозрачность */
-      }
-      
-      .customs-pagination .swiper-pagination-bullet-active {
-        background: #4a9781;
-      }
 }

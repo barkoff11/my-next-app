@@ -34,6 +34,10 @@
     padding: 20px 10px;
 }
 
+.content:hover{
+    box-shadow: 4px 4px 20px #3D8568;
+}
+
 .content svg{
     width: 70px;
     height: 40px;
@@ -147,8 +151,8 @@
         margin-top: 37px;
         display: grid;
         grid-template-columns: repeat(2, 330px); /* 3 колонки */
-        row-gap: 21px;
-        column-gap: 31px;
+        row-gap: 29px;
+        column-gap: 28px;
     }
     
     .content {

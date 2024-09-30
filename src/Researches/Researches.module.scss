@@ -47,6 +47,10 @@
     background-color: rgb(61, 133, 104);
 }
 
+.buttonOne:hover{
+    background-color: #52B287;
+}
+
 
 .buttonTwo{
     padding: 13px 0;
@@ -55,9 +59,15 @@
     margin: 15px 25px;
     color: rgb(61, 133, 104);
     font-size: 16px;
+    background-color: white;
     letter-spacing: 0%;
     text-align: center;
     border: 3px solid rgb(61, 133, 104);
+}
+
+.buttonTwo:hover{
+    background-color: #3D8568;
+    color: white;
 }
 
 .imageColumn {
@@ -109,7 +119,6 @@
         display: flex;
         align-items: center;
         position: relative;
-        z-index: 1;
         padding-bottom: 50px;
         padding-top: 37px;
     }
@@ -197,7 +206,6 @@
     top: 45px;
     left: 385px;
     position: absolute;
-    z-index: 10;
     }
 
     .container::before {
@@ -207,7 +215,6 @@
     height: 900px;
     border-radius: 50%;
     border: 80px solid #4a9781;
-    z-index: -2;
     }
 }
 
@@ -219,12 +226,11 @@
         display: flex;
         align-items: center;
         position: relative;
-        z-index: 1;
         padding-bottom: 70px;
     }
     
     .text{
-        width: 320px;
+        width: 280px;
         position: relative;
         font-size: 29px;
         font-weight: 700;
@@ -310,19 +316,17 @@
         display: block;
         width: 320px;
         height: 255px;
-        right: 318px;
-        top: 219px;
-        position: relative;
-        z-index: 10;
+        left: 1px;
+        top: 631px;
+        position: absolute;
     }
 
     .container::before {
-        top: 43px;
-        left: 573px;
+        top: 55px;
+        left: 288px;
         width: 800px;
         height: 800px;
         border-radius: 50%;
         border: 80px solid #4a9781;
-        z-index: -2;
     }
 }

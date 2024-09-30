@@ -3,6 +3,7 @@
 import React from 'react';
 import styles from './Content.module.scss';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import './paginator.scss';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -22,13 +23,14 @@ const Content = () => {
         <div className={styles.swiper}>
         <Swiper 
              modules={[Pagination]}
+             spaceBetween={30}
              pagination={{ clickable: true, el: '.customs-pagination' }}
              breakpoints={{
                 320: {
                     slidesPerView: 1.1,
                 },
-                1020: {
-                    slidesPerView: 2,
+                1010: {
+                    slidesPerView: 3,
                 },
                 1900: {
                     slidesPerView: 3,

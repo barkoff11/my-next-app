@@ -12,6 +12,77 @@
     margin: 0px 10px 8px 0px;
 }
 
+.btn_prev{
+    position: absolute;
+    background-color: white;
+    color: white;
+    border: white;
+    width: 46px;
+    height: 40px;
+    right: 61px;
+    top: 10px;;
+}
+
+.btn_prev svg{
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    right: 5px;
+    top: 2px;
+}
+
+.btn_next{
+    position: absolute;
+    background-color: white;
+    color: white;
+    border: white;
+    width: 46px;
+    height: 40px;
+    right: 10px;
+    top: 10px;
+}
+
+.btn_next svg{
+    position: absolute;
+    transform: scaleX(-1);
+    width: 36px;
+    height: 36px;
+    right: 5px;
+    top: 2px;
+}
+
+.hover {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+}
+
+.unHover {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease;
+}
+
+.btn_prev:hover .hover {
+    opacity: 1;
+    visibility: visible;
+}
+
+.btn_prev:hover .unHover {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.btn_next:hover .hover {
+    opacity: 1;
+    visibility: visible;
+}
+
+.btn_next:hover .unHover {
+    opacity: 0;
+    visibility: hidden;
+}
+
 .text{
     font-size: 16px;
 }
@@ -19,6 +90,7 @@
 .text_under{
     display: flex;
     align-items: flex-end;
+    color: rgb(61, 133, 104);
 }
 
 .grid {
@@ -42,6 +114,14 @@
     margin-top: 21px;
 }
 
+.example:hover{
+    background-color: rgb(61, 133, 104);
+    color: white;
+    .text_under{
+        color: #F5F5F5;
+    }
+}
+
 @include viewport--m{
     .container{
         position: relative;
@@ -51,6 +131,45 @@
     .container h1{
         font-size: 36px;
         margin: 0px 10px 8px 0px;
+    }
+
+    .btn_prev{
+        position: absolute;
+        background-color: white;
+        color: white;
+        border: white;
+        width: 46px;
+        height: 40px;
+        right: 61px;
+        top: -2px;;
+    }
+    
+    .btn_prev svg{
+        position: absolute;
+        width: 36px;
+        height: 36px;
+        right: 5px;
+        top: 2px;
+    }
+    
+    .btn_next{
+        position: absolute;
+        background-color: white;
+        color: white;
+        border: white;
+        width: 46px;
+        height: 40px;
+        right: 10px;
+        top: -2px;
+    }
+    
+    .btn_next svg{
+        position: absolute;
+        transform: scaleX(-1);
+        width: 36px;
+        height: 36px;
+        right: 5px;
+        top: 2px;
     }
     
     .text{
@@ -82,8 +201,8 @@
         padding: 30px 40px 33px 30px;
         line-height: 133%;
         border-radius: 20px; 
-        width: 210px;
-        height: 321px;
+        width: 140px;
+        height: 261px;
         margin-top: 13px;
     }
 }

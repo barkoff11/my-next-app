@@ -10,38 +10,132 @@
     margin-top: 158px;
 }
 
+.btn_prev{
+    position: absolute;
+    background-color: white;
+    color: white;
+    border: white;
+    width: 46px;
+    height: 40px;
+    right: 61px;
+    top: -39px;;
+}
+
+.btn_prev svg{
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    right: 5px;
+    top: 2px;
+}
+
+.btn_next{
+    position: absolute;
+    background-color: white;
+    color: white;
+    border: white;
+    width: 46px;
+    height: 40px;
+    right: 10px;
+    top: -39px;
+}
+
+.btn_next svg{
+    position: absolute;
+    transform: scaleX(-1);
+    width: 36px;
+    height: 36px;
+    right: 5px;
+    top: 2px;
+}
+
+.hover {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+}
+
+.unHover {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease;
+}
+
+.btn_prev:hover .hover {
+    opacity: 1;
+    visibility: visible;
+}
+
+.btn_prev:hover .unHover {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.btn_next:hover .hover {
+    opacity: 1;
+    visibility: visible;
+}
+
+.btn_next:hover .unHover {
+    opacity: 0;
+    visibility: hidden;
+}
+
+
 .warp h1{
     color: rgb(0, 0, 0);
     font-size: 40px;
-    width: 500px;
+    width: 596px;
     font-weight: 700;
     line-height: 120%;
     margin: 25px 0 10px 0;
     text-align: left;
 }
 
+
 .scrollable {
-    padding: 10px 0px 10px 45px;
-    max-width: 560px;
-    height: 440px; /* Задайте нужную высоту */
-    overflow-y: scroll; /* Включаем вертикальную прокрутку */
-    scrollbar-width: thin; /* Для Firefox */
-    scrollbar-color: green rgba(0, 0, 0, 0.5); /* Цвет скролла и фона */
+    position: relative;
+    padding: 0 0 10px 46px; /* Измените отступы */
+    max-width: 596px;
+    height: 440px;
+    overflow: hidden;
+    overflow-y: auto; /* Скрыть горизонтальный скролл */
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: #3D8568 rgba(0, 0, 0, 0.5);
+    direction: rtl; /* Установите направление текста слева направо */
+    transition: opacity 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.7);
+    span{
+        direction: ltr;
+    }
+}
+
+.scroll-container::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 15px; /* Высота размытия */
+    background: rgba(255, 255, 255, 0.7); /* Цвет фона */
+    backdrop-filter: blur(10px); /* Эффект размытия */
+    pointer-events: none; /* Чтобы клики проходили через псевдоэлемент */
 }
 
 .scrollable::-webkit-scrollbar {
-    width: 8px; /* Ширина скролла */
+    width: 20px; 
 }
 
 .scrollable::-webkit-scrollbar-thumb {
-    background-color: green; /* Цвет скролла */
-    border-radius: 10px; /* Закругление углов */
+    background-color: #3D8568; 
+    border-radius: 20px; 
 }
 
 .scrollable::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.5); /* Цвет фона скролла */
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.5); 
 }
-
 
 .buttonOne{
     width: 238px;
@@ -53,6 +147,10 @@
     text-align: center;
     border: 2px solid rgb(61, 133, 104);
     background-color: rgb(61, 133, 104);
+}
+
+.buttonOne:hover{
+    background-color: #52B287;
 }
 
 .menuTwo{
@@ -124,6 +222,45 @@
         line-height: 120%;
         margin: 3px 0 10px 0;
         text-align: left;
+    }
+
+    .btn_prev{
+        position: absolute;
+        background-color: white;
+        color: white;
+        border: white;
+        width: 46px;
+        height: 40px;
+        right: 61px;
+        top: -20px;;
+    }
+    
+    .btn_prev svg{
+        position: absolute;
+        width: 36px;
+        height: 36px;
+        right: 5px;
+        top: 2px;
+    }
+    
+    .btn_next{
+        position: absolute;
+        background-color: white;
+        color: white;
+        border: white;
+        width: 46px;
+        height: 40px;
+        right: 10px;
+        top: -20px;
+    }
+    
+    .btn_next svg{
+        position: absolute;
+        transform: scaleX(-1);
+        width: 36px;
+        height: 36px;
+        right: 5px;
+        top: 2px;
     }
 
     .scrollable {

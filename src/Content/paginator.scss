@@ -1,0 +1,21 @@
+.swiper-slide{
+    height: 282px !important;
+}
+
+.swiper-pagination {
+    margin-top: 10px !important;
+    margin-left: 10px !important; /* Сдвигаем все точки вправо на 10px */
+}
+
+.swiper-pagination-clickable .swiper-pagination-bullet {
+    background: #858585; /* Цвет точек */
+    color: #858585;
+    opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+    width: 20px !important; 
+    border-radius: 20px !important;
+    background: #489c84 !important;
+    opacity: 1 !important;
+}

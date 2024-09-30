@@ -49,4 +49,29 @@
     }
   }
   
+  @mixin custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary-color) #f1f1f1;
+  
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+  
+    &::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--primary-color);
+      border-radius: 8px;
+    }
+  }
+
+  @mixin btn-reset {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    box-shadow: none;
+  }
+  
   

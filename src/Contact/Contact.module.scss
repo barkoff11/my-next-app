@@ -68,6 +68,10 @@
     background-color: rgb(61, 133, 104);
 }
 
+.buttonOne:hover{
+    background-color: #52B287;
+}
+
 .image{
     position: absolute;
   width: 575px;
@@ -197,7 +201,7 @@
     }
     
     .buttonOne{
-        width: 203px;
+        width: 290px;
         height: 50px;
         border-radius: 50px;
         margin-top: auto;
@@ -212,8 +216,8 @@
         position: absolute;
         width: 290px;
         height: 320px;
-        left: 4px;
-        top: 315px;
+        left: 16px;
+        top: 487px;
         border-radius: 20px;
     }
 }

@@ -41,6 +41,11 @@
     color: black;
 }
 
+.menu a:hover{
+    color: rgb(61, 133, 104);
+    text-decoration: underline;
+}
+
 
 
 
@@ -69,26 +74,38 @@
         justify-content: space-between;
         align-items: center;
         position: relative;
-        z-index: 10;
-    }
-
-    .logo {
-        padding: 0;
-        transition: transform 0.9s ease, color 0.3s ease; 
-        color: black; 
-        z-index: 10;
+        padding-top: 16px;
     }
     
-    .logo_active {
-        transform: translateY(calc(80vh - 30px)); /* Перемещение вниз на 100% высоты экрана */
-        color: gray; 
-        z-index: 10;
-    }
-
     .logo svg{
-        display: block;
         width: 160px;
         height: 45px;
+    }
+    
+    .logoUnActive {
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+    
+    .logoActive {
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+
+    .logo_active .logoUnActive {
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+    .logo_active .logoActive {
+        position: fixed;
+        opacity: 1;
+        visibility: visible;
+        z-index: 10;
+        left: 70px;
+        top: 730px;
     }
     
     .blur {
@@ -104,20 +121,27 @@
 
     .burger_icon{
         display: block;
-        position: relative;
         cursor: pointer;
         z-index: 10;
+        right: -4px;
+        top: 33px;
     }
 
     .burger_icon svg{
-        width: 18px;
-        height: 13px;
+        width: 19px;
+        height: 19px;
+    }
+
+    .closedMenu{
+        position: absolute;
+        right: 65px;
+        top: 15px;
     }
     
     .menu{
-        padding: 5% 0 0 2%;
+        padding: 50px 70px;
         background-color: #F5F9F7;
-        position: fixed;
+        position: absolute;
         display: none;
         align-items: center;
         flex-direction: column;
@@ -130,9 +154,12 @@
     }
     
     .menu_active{
-        transform: translateX(0);
+        opacity: 1; // Меню видимо
+        transform: translateY(0); // Возвращаем в исходное положение
+        pointer-events: auto;
         display: block;
         box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+        margin: 0;
     }
 
     .menu li{
@@ -142,7 +169,6 @@
 
     .container::before{
         right: -360px;
-        z-index: 1;
     }
 
 }
@@ -152,7 +178,6 @@
         width: 320px;
         margin-left: 1px;
         margin-right: 1px;
-        z-index: 10;
         margin-top: 13px;
     }
 
@@ -162,7 +187,6 @@
     }
     
     .logo_active {
-        transform: translateY(calc(80vh - 30px)); /* Перемещение вниз на 100% высоты экрана */
         color: gray; 
         z-index: 10;
     }
@@ -170,6 +194,32 @@
     .logo svg{
         width: 120px;
         height: 20px;
+    }
+
+    .logoUnActive {
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+    
+    .logoActive {
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+
+    .logo_active .logoUnActive {
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+    .logo_active .logoActive {
+        position: fixed;
+        opacity: 1;
+        visibility: visible;
+        z-index: 10;
+        left: 20px;
+        top: 330px;
     }
     
     .blur {
@@ -193,6 +243,18 @@
     .burger_icon svg{
         width: 18px;
         height: 14px;
+    }
+
+    .openMenu{
+        position: absolute;
+        top: -38px;
+        right: 5px; 
+    }
+
+    .closedMenu{
+        position: absolute;
+        right: 80px;
+        top: -20px;
     }
     
     .menu{
@@ -219,10 +281,13 @@
     .menu li{
         margin-top: 15px;
         margin-bottom: 15px;
+        padding: 10px 20px 0 20px;
     }
 
     .container::before{
-        left: 320px;
+        left: 197px;
+        top: -242px;
+        position: absolute
     }
 }
 

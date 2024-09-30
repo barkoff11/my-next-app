@@ -2,33 +2,46 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import styles from './Researches.module.scss';
+import Popup from '@/Pop-up/Pop-up';
 
 const Researches = () => {
     const BASE_PATH = process.env.REACT_APP_BASE_PATH;
 
+    // Реф и состояние для изменения текста на второй кнопке
     const buttonRef = useRef<HTMLButtonElement | null>(null);
-  const [buttonText, setButtonText] = useState('Примеры исследований');
+    const [buttonText, setButtonText] = useState('Примеры исследований');
 
-  const updateButtonText = () => {
-    if (buttonRef.current) {
-        const screenWidth = window.innerWidth; // Получаем ширину окна
+    // Состояние для управления видимостью поп-апа
+    const [isPopupOpen, setIsPopupOpen] = useState(false);
 
-        if (screenWidth < 1100 && screenWidth > 320) { // Задаем пороговое значение ширины
-            setButtonText('Примеры');
-        } else {
-            setButtonText('Примеры исследований');
+    const updateButtonText = () => {
+        if (buttonRef.current) {
+            const screenWidth = window.innerWidth; // Получаем ширину окна
+            if (screenWidth < 1100 && screenWidth > 320) { // Задаем пороговое значение ширины
+                setButtonText('Примеры');
+            } else {
+                setButtonText('Примеры исследований');
+            }
         }
-    }
-}
-
-  useEffect(() => {
-    updateButtonText(); // Первоначальная проверка
-
-    window.addEventListener('resize', updateButtonText);
-    return () => {
-      window.removeEventListener('resize', updateButtonText);
     };
-  }, []);
+
+    // Обработчик для открытия поп-апа
+    const openPopup = () => {
+        setIsPopupOpen(true);
+    };
+
+    // Обработчик для закрытия поп-апа
+    const closePopup = () => {
+        setIsPopupOpen(false);
+    };
+
+    useEffect(() => {
+        updateButtonText(); // Первоначальная проверка
+        window.addEventListener('resize', updateButtonText);
+        return () => {
+            window.removeEventListener('resize', updateButtonText);
+        };
+    }, []);
   return (
 <div className={styles.container}>
     <div className={styles.textColumn}>
@@ -51,12 +64,15 @@ const Researches = () => {
                     </div>    
                 </div>
     <div className={styles.buttonContainer}>
-        <button className={styles.buttonOne}>Заказать исследование</button>
+        <button className={styles.buttonOne} onClick={openPopup}>Заказать исследование</button>
         <button ref={buttonRef} className={styles.buttonTwo}>{buttonText}</button>
     </div>
         
     </div>
     <img src={`${BASE_PATH}/img/company__bg.png`} className={styles.image}/>
+    {isPopupOpen && (
+        <Popup closePopup={closePopup}/>
+    )}
 </div>
 
 );

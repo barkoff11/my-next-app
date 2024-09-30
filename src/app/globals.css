@@ -55,6 +55,7 @@ button {
 
   &:hover {
     cursor: pointer;
+        transition: opacity 0.5s ease;
   }
 }
 
@@ -66,4 +67,10 @@ body {
 
 h1 {
   font-family: 'Stem', sans-serif;
+}
+
+@media (max-width: 320px) {
+  body {
+      overflow-x: hidden;
+  }
 }

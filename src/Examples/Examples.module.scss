@@ -16,6 +16,77 @@
     margin-bottom: 19px;
 }
 
+.btn_prev{
+    position: absolute;
+    background-color: white;
+    color: white;
+    border: white;
+    width: 46px;
+    height: 40px;
+    right: 61px;
+    top: 30px;;
+}
+
+.btn_prev svg{
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    right: 5px;
+    top: 2px;
+}
+
+.btn_next{
+    position: absolute;
+    background-color: white;
+    color: white;
+    border: white;
+    width: 46px;
+    height: 40px;
+    right: 10px;
+    top: 30px;
+}
+
+.btn_next svg{
+    position: absolute;
+    transform: scaleX(-1);
+    width: 36px;
+    height: 36px;
+    right: 5px;
+    top: 2px;
+}
+
+.hover {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+}
+
+.unHover {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease;
+}
+
+.btn_prev:hover .hover {
+    opacity: 1;
+    visibility: visible;
+}
+
+.btn_prev:hover .unHover {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.btn_next:hover .hover {
+    opacity: 1;
+    visibility: visible;
+}
+
+.btn_next:hover .unHover {
+    opacity: 0;
+    visibility: hidden;
+}
+
 .wrapper {
     display: flex; /* Располагаем элементы в строку */
     gap: 30px;
@@ -26,10 +97,15 @@
 }
 
 .examples{
+    color: white;
     width: 350px;
     height: 420px;
     background-image: url(../../public/img/examples__item-title-bg.png);
     padding: 20px 20px 20px 50px;
+}
+
+.content:hover{
+    box-shadow: 4px 4px 20px #3D8568;
 }
 
 .examples h2{
@@ -57,10 +133,16 @@
     border-radius: 50px;
     margin: 10px 0px 15px 0px;
     color: rgb(61, 133, 104);
+    background-color: white;
     font-size: 17px;
     letter-spacing: 0%;
     text-align: center;
     border: 3px solid rgb(61, 133, 104);
+}
+
+.buttonOne:hover{
+    background-color: #3D8568;
+    color: white;
 }
 
 .btn-one-text{
@@ -90,6 +172,10 @@
     background-color: rgb(61, 133, 104);
 }
 
+.buttonTwo:hover{
+    background-color: #52B287;
+}
+
 
 @include viewport--m{
     .container {
@@ -109,7 +195,6 @@
 
     .wrapper{
         display: flex;
-        justify-content: space-between;
         align-items: flex-start;
         width: 691px;
     }
@@ -122,6 +207,45 @@
         line-height: 120%;
         margin: 3px 0 10px 0;
         text-align: left;
+    }
+
+    .btn_prev{
+        position: absolute;
+        background-color: white;
+        color: white;
+        border: white;
+        width: 46px;
+        height: 40px;
+        right: 61px;
+        top: 23px;;
+    }
+    
+    .btn_prev svg{
+        position: absolute;
+        width: 36px;
+        height: 36px;
+        right: 5px;
+        top: 2px;
+    }
+    
+    .btn_next{
+        position: absolute;
+        background-color: white;
+        color: white;
+        border: white;
+        width: 46px;
+        height: 40px;
+        right: 10px;
+        top: 23px;
+    }
+    
+    .btn_next svg{
+        position: absolute;
+        transform: scaleX(-1);
+        width: 36px;
+        height: 36px;
+        right: 5px;
+        top: 2px;
     }
 
     .examples{
@@ -148,7 +272,7 @@
 
     .buttonContainer{
         display: flex;
-        gap: 30px;
+        gap: 19px;
     }
     
     .buttonOne{
@@ -224,6 +348,14 @@
         width: 290px;
         line-height: 120%;
         margin-bottom: 21px;
+    }
+
+    .btn_prev{
+        display: none;
+    }
+
+    .btn_next{
+        display: none;
     }
 
     .wrapper{

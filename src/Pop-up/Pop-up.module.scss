@@ -1,0 +1,170 @@
+@import '@/styles/mixin.scss';
+@import '@/styles/variables.scss';
+
+
+.popupWrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .name{
+    justify-content: center;
+    margin: 7.5px 0;
+    border-radius: 10px;
+    border-color: rgb(201, 201, 201);
+    width: 269px;
+    height: 40px;
+  }
+
+  
+  .popup {
+    position: relative;
+    background-color: white;
+    padding: 5px 30px;
+    border-radius: 10px;
+    width: 329px;
+    height: 508px;
+    max-width: 90%;
+    z-index: 10;
+  }
+  
+  .closeBtn {
+    position: absolute;
+    top: -25px;
+    right: -36px;
+    font-size: 25px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    width: 269px;
+  }
+  
+  .email {
+    justify-content: center;
+    margin: 7.5px 0;
+    border-radius: 10px;
+    border-color: rgb(201, 201, 201);
+    width: 269px;
+    height: 40px;
+  }
+
+  .message{
+    justify-content: center;
+    margin: 7.5px 0;
+    border-radius: 10px;
+    border-color: rgb(201, 201, 201);
+    width: 269px;
+    height: 160px;
+  }
+  
+  .buttonOne {
+    width: 269px;
+    height: 50px;
+    margin: 7px 0;
+    background-color: rgb(61, 133, 104);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+  
+  .checkboxContainer {
+    font-size: 12px;
+    color: rgb(201, 201, 201);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  
+    // Стили для активного состояния, когда чекбокс отмечен
+    input:checked {
+      background-color: rgb(61, 133, 104); // Зеленый цвет для фона при активации
+      border-color: rgb(61, 133, 104);
+    }
+
+    a{
+        color: rgb(201, 201, 201);
+        text-decoration: underline;
+    }
+}
+  
+  .openPopupBtn {
+    padding: 10px 20px;
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  @include viewport--xs{
+    .popup {
+      width: 100%;
+      padding: 0px 30px;
+      max-width: 232px;
+      position: relative;
+      left: 47px;
+      top: 122px;
+    }
+
+    .form {
+      width: 200px;
+    }
+
+    .overlay {
+      width: 320px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .name,
+    .email,
+    .message,
+    .buttonOne {
+      width: 172px;
+      height: 40px;
+      border-radius: 5px;
+      font-size: 15px;
+      padding: 10px 21px;
+    }
+
+    .message{
+      height: 160px;
+    }
+
+    .buttonOne {
+      height: 45px;
+      border-radius: 30px;
+    }
+
+    .closeBtn {
+      top: -20px;
+      right: -20px;
+      font-size: 20px;
+    }
+  }

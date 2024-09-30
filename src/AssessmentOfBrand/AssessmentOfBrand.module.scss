@@ -111,18 +111,6 @@
     }
 }
 
-.scroll-container::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 15px; /* Высота размытия */
-    background: rgba(255, 255, 255, 0.7); /* Цвет фона */
-    backdrop-filter: blur(10px); /* Эффект размытия */
-    pointer-events: none; /* Чтобы клики проходили через псевдоэлемент */
-}
-
 .scrollable::-webkit-scrollbar {
     width: 20px; 
 }
@@ -135,6 +123,10 @@
 .scrollable::-webkit-scrollbar-track {
     border-radius: 20px;
     background: rgba(0, 0, 0, 0.5); 
+}
+
+.aboutUs{
+    display: none;
 }
 
 .buttonOne{
@@ -354,8 +346,13 @@
     .scrollable {
         width: 290px;
         height: 485px;
-        overflow-y: auto;
+        overflow-y: hidden;
         padding: 10px 0px 10px 0px;
+    }
+
+    .aboutUs{
+        display: block;
+        color: #3D8568;
     }
     
     .buttonOne{

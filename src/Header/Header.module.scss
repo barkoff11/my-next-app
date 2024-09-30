@@ -21,6 +21,10 @@
     height: 26px;
 }
 
+.logoActive {
+    display: none;
+}
+
 .menu{
     align-items: center;
     position: relative;
@@ -89,6 +93,7 @@
     }
     
     .logoActive {
+        display: block;
         opacity: 0;
         visibility: hidden;
     }

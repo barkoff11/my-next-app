@@ -9,13 +9,25 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import { Navigation, Pagination } from 'swiper/modules';
+import PopUp from './PopUp';
 
 const AssessmentOfBrand = () => {
     const [selectedText, setSelectedText] = useState<React.ReactNode>(null);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [selectedId, setSelectedId]= useState('');
+    const [isPopupOpen, setIsPopupOpen] = useState(false);
 
     const BASE_PATH = process.env.REACT_APP_BASE_PATH;
+
+        // Обработчик для открытия поп-апа
+        const openPopup = () => {
+            setIsPopupOpen(true);
+        };
+    
+        // Обработчик для закрытия поп-апа
+        const closePopup = () => {
+            setIsPopupOpen(false);
+        };
 
     const handleClick = (id: string, label: React.ReactNode) => {
         setSelectedText(label);
@@ -71,6 +83,10 @@ const AssessmentOfBrand = () => {
                 <div className={styles.scrollable}>
                     <span>{selectedText}</span>
                 </div>
+                <a className={styles.aboutUs} onClick={openPopup}>Подробнее</a>
+                {isPopupOpen && (
+                <PopUp closePopup={closePopup} currentIndex={0}/>
+                )}
                 <button className={styles.buttonOne}>Заказать исследование</button>
             </div>
 

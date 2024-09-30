@@ -2,18 +2,15 @@ import React, { useEffect } from 'react';
 import styles from './Pop-up.module.scss';
 
 interface PopupProps {
-  closePopup: () => void; // Пропс для функции закрытия попапа
+  closePopup: () => void; 
 }
 
 const Popup: React.FC<PopupProps> = ({ closePopup }) => {
-  // Эффект для блокировки скролла при монтировании компонента
   useEffect(() => {
-    // Отключаем прокрутку страницы
-    document.body.style.overflow = 'hidden';
+    document.body.classList.add('no-scroll');
 
-    // Восстанавливаем прокрутку при размонтировании компонента
     return () => {
-      document.body.style.overflow = '';
+      document.body.classList.remove('no-scroll');
     };
   }, []);
 

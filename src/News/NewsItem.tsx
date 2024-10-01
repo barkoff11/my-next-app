@@ -12,9 +12,7 @@ export interface NewsItem {
     };
 }
 
-const NewsItem = ({ date, title}: NewsItem) => {    
-
-    
+const NewsItem = ({ date, title}: NewsItem) => {     
 
     return (
         <div className={styles.example}>

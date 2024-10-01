@@ -1,21 +1,26 @@
 import React, { useEffect, useState } from 'react';
 import styles from './PopUp.module.scss';
-import { menuItems } from './constant';
+import exampleData from './const';
 
 interface PopupProps {
   closePopup: () => void; 
   currentIndex: number;  // Передаем текущий индекс выбранного элемента
 }
 
-const PopUp: React.FC<PopupProps> = ({ closePopup, currentIndex }) => {
+const Pop_Up: React.FC<PopupProps> = ({ closePopup, currentIndex }) => {
 
   const [selectedText, setSelectedText] = useState<string>(''); // Для текста статьи
-  const [selectedId, setSelectedId] = useState<string>(''); // Для ID статьи
+  const [selectedTitle, setSelectedTitle] = useState<string>(''); // Для заголовка статьи
+  const [selectedDate, setSelectedDate] = useState<string>(''); // Для даты статьи
 
   useEffect(() => {
-      const selectedItem = menuItems[currentIndex];
-    setSelectedText(selectedItem.label); 
-    setSelectedId(selectedItem.id);
+    // Когда компонент загружается, данные берутся на основе переданного currentIndex
+    const selectedItem = exampleData[currentIndex];
+    if (selectedItem) {
+      setSelectedTitle(selectedItem.title);
+      setSelectedDate(`${selectedItem.date.day} ${selectedItem.date.month} ${selectedItem.date.year}`);
+      setSelectedText(selectedItem.content)
+    }
   }, [currentIndex]);
 
   useEffect(() => {
@@ -35,13 +40,14 @@ const PopUp: React.FC<PopupProps> = ({ closePopup, currentIndex }) => {
           &times;
         </button>
 
-        <h2>{selectedId}</h2> {/* Показываем ID статьи */}
+        <h2>{selectedTitle}</h2> {/* Показываем заголовок статьи */}
+        <p className={styles.date}>{selectedDate}</p> {/* Показываем дату статьи */}
         <div className={styles.scrollable}>
-          <span>{selectedText}</span> {/* Показываем текст статьи */}
+          <span>{selectedText}</span> {/* Здесь можно отображать полный текст статьи, если нужно */}
         </div>
       </div>
     </div>
   );
 };
 
-export default PopUp;
+export default Pop_Up;

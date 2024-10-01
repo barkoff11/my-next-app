@@ -1,0 +1,298 @@
+@import '@/styles/mixin.scss';
+@import '@/styles/variables.scss';
+
+
+
+.popupWrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5); // Полупрозрачный фон
+  z-index: 9999; // Поверх всего
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.name{
+  justify-content: center;
+  margin: 7.5px 0;
+  border-radius: 10px;
+  border-color: rgb(201, 201, 201);
+  width: 269px;
+  height: 40px;
+}
+
+
+.popup {
+  background-color: white; // Фон модального окна
+  padding: 20px;
+  border-radius: 8px; // Скругленные углы
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); // Тень для модального окна
+  max-width: 529px; // Максимальная ширина
+  height: 608px;
+  width: 100%; // Ширина окна
+}
+
+.closeBtn {
+  position: absolute;
+  top: -25px;
+  right: -36px;
+  font-size: 25px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 269px;
+}
+
+.email {
+  justify-content: center;
+  margin: 7.5px 0;
+  border-radius: 10px;
+  border-color: rgb(201, 201, 201);
+  width: 269px;
+  height: 40px;
+}
+
+.message{
+  justify-content: center;
+  margin: 7.5px 0;
+  border-radius: 10px;
+  border-color: rgb(201, 201, 201);
+  width: 269px;
+  height: 160px;
+}
+
+.buttonOne {
+  width: 269px;
+  height: 50px;
+  margin: 7px 0;
+  background-color: rgb(61, 133, 104);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.checkboxContainer {
+  font-size: 12px;
+  color: rgb(201, 201, 201);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  // Стили для активного состояния, когда чекбокс отмечен
+  .scrollable{
+        position: relative;
+        padding: 0 25px 10px 0px; /* Измените отступы */
+        max-width: 239px;
+        height: 268px;
+        overflow: hidden;
+        overflow-y: auto; /* Скрыть горизонтальный скролл */
+        overflow-x: hidden;
+        scrollbar-width: thin;
+        scrollbar-color: #3D8568 rgba(0, 0, 0, 0.5);
+        transition: opacity 0.3s ease;
+        background-color: rgba(255, 255, 255, 0.7);
+  }
+}
+
+@include viewport--m{
+
+.popupWrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.name{
+  justify-content: center;
+  margin: 7.5px 0;
+  border-radius: 10px;
+  border-color: rgb(201, 201, 201);
+  width: 269px;
+  height: 40px;
+}
+
+
+.popup {
+  position: relative;
+  background-color: white;
+  padding: 5px 30px;
+  border-radius: 10px;
+  width: 329px;
+  height: 508px;
+  max-width: 90%;
+  z-index: 10;
+}
+
+.closeBtn {
+  position: absolute;
+  top: -25px;
+  right: -36px;
+  font-size: 25px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 269px;
+}
+
+.email {
+  justify-content: center;
+  margin: 7.5px 0;
+  border-radius: 10px;
+  border-color: rgb(201, 201, 201);
+  width: 269px;
+  height: 40px;
+}
+
+.message{
+  justify-content: center;
+  margin: 7.5px 0;
+  border-radius: 10px;
+  border-color: rgb(201, 201, 201);
+  width: 269px;
+  height: 160px;
+}
+
+.buttonOne {
+  width: 269px;
+  height: 50px;
+  margin: 7px 0;
+  background-color: rgb(61, 133, 104);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.checkboxContainer {
+  font-size: 12px;
+  color: rgb(201, 201, 201);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  // Стили для активного состояния, когда чекбокс отмечен
+    .scrollable{
+        position: relative;
+        padding: 0 25px 10px 0px; /* Измените отступы */
+        max-width: 239px;
+        height: 268px;
+        overflow: hidden;
+        overflow-y: auto; /* Скрыть горизонтальный скролл */
+        overflow-x: hidden;
+        scrollbar-width: thin;
+        scrollbar-color: #3D8568 rgba(0, 0, 0, 0.5);
+        transition: opacity 0.3s ease;
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+  }
+}
+
+@include viewport--xs{
+
+
+  .popupWrapper h2{
+    margin-top: 25px;
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+  
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); // Затенение фона при открытом поп-апе
+    }
+
+
+  
+  .popup {
+    background-color: white;
+    padding: 5px 15px;
+    border-radius: 10px;
+    width: 250px;
+    height: 508px;
+    padding: 0px 33px;
+    z-index: 1000;
+    right: 35px;
+    transition: opacity 0.5s ease;
+  }
+  
+  .closeBtn {
+    position: absolute;
+    top: -25px;
+    right: -36px;
+    font-size: 25px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+
+    .closeBtn {
+      top: -20px;
+      right: -20px;
+      font-size: 20px;
+    }
+
+    .scrollable {
+        position: relative;
+        padding: 0 25px 10px 0px; /* Измените отступы */
+        max-width: 239px;
+        height: 268px;
+        overflow: hidden;
+        overflow-y: auto; /* Скрыть горизонтальный скролл */
+        overflow-x: hidden;
+        scrollbar-width: thin;
+        scrollbar-color: #3D8568 rgba(0, 0, 0, 0.5);
+        transition: opacity 0.3s ease;
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+  }

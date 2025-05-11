@@ -6,7 +6,7 @@ import styles from './Examples.module.scss';
 const Examples = () => {
     // const [currentIndex, setCurrentIndex] = useState(0);
 
-    const BASE_PATH = process.env.REACT_APP_BASE_PATH;
+    
 
 
     // const handlePrev = () => {
@@ -27,18 +27,18 @@ const Examples = () => {
             <h1>Примеры исследований</h1>
                 <button className={styles.btn_prev}>
                     <svg className={styles.hover}>
-                        <use xlinkHref={`${BASE_PATH}/img/sprite.svg#left-active`}></use>
+                        <use xlinkHref={`/img/sprite.svg#left-active`}></use>
                     </svg>
                     <svg className={styles.unHover}>
-                        <use xlinkHref={`${BASE_PATH}/img/sprite.svg#left`}></use>
+                        <use xlinkHref={`/img/sprite.svg#left`}></use>
                     </svg>
                 </button>
                 <button className={styles.btn_next}>
                     <svg className={styles.hover}>
-                        <use xlinkHref={`${BASE_PATH}/img/sprite.svg#left-active`}></use>
+                        <use xlinkHref={`/img/sprite.svg#left-active`}></use>
                     </svg>
                     <svg className={styles.unHover}>
-                        <use xlinkHref={`${BASE_PATH}/img/sprite.svg#left`}></use>
+                        <use xlinkHref={`/img/sprite.svg#left`}></use>
                     </svg>
                 </button>
             <div className={styles.wrapper}>

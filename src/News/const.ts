@@ -1,14 +1,14 @@
-export interface NewsItem {
+export interface INewsItem {
     title: string;
     date: {
         day: number;
         month: string;
         year: number;
     };
-    content: string; // Новое свойство для текста статьи
+    content: string;
 }
 
-export const exampleData: NewsItem[] = [
+export const exampleData: INewsItem[] = [
     { 
         title: "НОСТРОЙ: рост стоимости стройматериалов является одной из главных проблем строительства", 
         date: { day: 25, month: "марта", year: 2020 }, 

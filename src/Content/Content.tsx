@@ -11,7 +11,7 @@ import 'swiper/css/scrollbar';
 import { Pagination } from 'swiper/modules';
 
 const Content = () => {
-    const BASE_PATH = process.env.REACT_APP_BASE_PATH;
+    
   return (
 <div className={styles.container}>
         <div className={styles.text}>
@@ -40,7 +40,7 @@ const Content = () => {
             <SwiperSlide>
                 <a className={styles.content}>
                     <svg>
-                        <use xlinkHref={`${BASE_PATH}/img/sprite.svg#tasks__item--research`}></use>
+                        <use xlinkHref={`/img/sprite.svg#tasks__item--research`}></use>
                     </svg>
                     Маркетинговое исследование для оценки привлекательности нового потребительского рынка или нового региона
                 </a>
@@ -48,7 +48,7 @@ const Content = () => {
             <SwiperSlide>
                 <a className={styles.content}>
                     <svg>
-                        <use xlinkHref={`${BASE_PATH}/img/sprite.svg#tasks__item--analysis`}></use>
+                        <use xlinkHref={`/img/sprite.svg#tasks__item--analysis`}></use>
                     </svg>
                     Анализ таможенной статистики для выявления основных конкурентов, поиска новых поставщиков и покупателей за рубежом
                 </a>
@@ -56,7 +56,7 @@ const Content = () => {
             <SwiperSlide>
                 <a className={styles.content}>
                     <svg>
-                        <use xlinkHref={`${BASE_PATH}/img/sprite.svg#tasks__item--measuring`}></use>
+                        <use xlinkHref={`/img/sprite.svg#tasks__item--measuring`}></use>
                     </svg>
                     Замер уровня знания и уровня лояльности к торговой марке для оценки текущего положения компании на рынке
                 </a>

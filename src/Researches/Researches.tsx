@@ -5,7 +5,6 @@ import styles from './Researches.module.scss';
 import Popup from '@/Pop-up/Pop-up';
 
 const Researches = () => {
-    const BASE_PATH = process.env.REACT_APP_BASE_PATH;
 
     // Реф и состояние для изменения текста на второй кнопке
     const buttonRef = useRef<HTMLButtonElement | null>(null);
@@ -51,14 +50,14 @@ const Researches = () => {
 
                     <div className={styles.content}>
                         <svg className={styles.svgOne}>
-                            <use xlinkHref={`${BASE_PATH}/img/sprite.svg#company__benefit--data`}></use>
+                            <use xlinkHref={`/img/sprite.svg#company__benefit--data`}></use>
                         </svg>
                         Данные для маркетинговых исследований собираются в строгом соответствии с целями и задачами заказчика
                     </div>
                     
                     <div className={styles.content}>
                         <svg className={styles.svgTwo}>
-                            <use xlinkHref={`${BASE_PATH}/img/sprite.svg#company__benefit--staff`}></use>
+                            <use xlinkHref={`/img/sprite.svg#company__benefit--staff`}></use>
                         </svg>
                         Наши специалисты проводят достоверные и точные исследования рынка
                     </div>    
@@ -69,7 +68,7 @@ const Researches = () => {
     </div>
         
     </div>
-    <img src={`${BASE_PATH}/img/company__bg.png`} className={styles.image}/>
+    <img src={`/img/company__bg.png`} className={styles.image}/>
     {isPopupOpen && (
         <Popup closePopup={closePopup}/>
     )}

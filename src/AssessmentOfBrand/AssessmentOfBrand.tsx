@@ -17,7 +17,7 @@ const AssessmentOfBrand = () => {
     const [selectedId, setSelectedId]= useState('');
     const [isPopupOpen, setIsPopupOpen] = useState(false);
 
-    const BASE_PATH = process.env.REACT_APP_BASE_PATH;
+    
 
         // Обработчик для открытия поп-апа
         const openPopup = () => {
@@ -63,18 +63,18 @@ const AssessmentOfBrand = () => {
             <>
                 <button className={styles['btn_prev']} onClick={handlePrev}>
                     <svg className={styles.hover}>
-                        <use xlinkHref={`${BASE_PATH}/img/sprite.svg#left-active`}></use>
+                        <use xlinkHref={`/img/sprite.svg#left-active`}></use>
                     </svg>
                     <svg className={styles.unHover}>
-                        <use xlinkHref={`${BASE_PATH}/img/sprite.svg#left`}></use>
+                        <use xlinkHref={`/img/sprite.svg#left`}></use>
                     </svg>
                 </button>
                 <button className={styles['btn_next']} onClick={handleNext}>
                     <svg className={styles.hover}>
-                        <use xlinkHref={`${BASE_PATH}/img/sprite.svg#left-active`}></use>
+                        <use xlinkHref={`/img/sprite.svg#left-active`}></use>
                     </svg>
                     <svg className={styles.unHover}>
-                        <use xlinkHref={`${BASE_PATH}/img/sprite.svg#left`}></use>
+                        <use xlinkHref={`/img/sprite.svg#left`}></use>
                     </svg>
                 </button>
             </>
@@ -91,34 +91,33 @@ const AssessmentOfBrand = () => {
             </div>
 
             <ul className={styles.menu}>
-                {menuItems.map((item, index) => (
-                    <li key={index} onClick={() => handleClick(item.id, item.label)}>
-                        <a>{String(index + 1).padStart(2, '0')}</a>
+                {menuItems.map((item) => (
+                    <li key={item.id} onClick={() => handleClick(item.id, item.label)}>
+                        <a>{String(item.id + 1).padStart(2, '0')}</a>
                         {item.id}
                     </li>
                 ))}
             </ul>
 
             <div className={styles.menuTwo}>
-            <Swiper
-    modules={[Pagination, Navigation]}
-    spaceBetween={30}
-    slidesPerView={1}
-    pagination={{ clickable: true, el: '.custom-paginations' }}
-    navigation={{
-        nextEl: '.btn_next',
-        prevEl: '.btn_prev',
-    }}
->
-{menuItems.map((item, index) => (
-        <SwiperSlide key={index}>
-            <li onClick={() => handleClick(item.id, item.label)}>
-                <a>{String(index + 1).padStart(2, '0')}</a> {item.id}
-            </li>
-        </SwiperSlide>
-    ))}
-</Swiper>
-            <div className="custom-paginations"></div>
+                <Swiper
+                    modules={[Pagination, Navigation]}
+                    spaceBetween={30}
+                    slidesPerView={1}
+                    pagination={{ clickable: true, el: '.custom-paginations' }}
+                    navigation={{
+                        nextEl: '.btn_next',
+                        prevEl: '.btn_prev',
+                }}>
+                    {menuItems.map((item) => (
+                        <SwiperSlide key={item.id}> {/* Используем item.id вместо индекса */}
+                            <li onClick={() => handleClick(item.id, item.label)}>
+                                <a>{String(item.id).padStart(2, '0')}</a> {item.id}
+                            </li>
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
+                <div className="custom-paginations"></div>
             </div>
         </div>
     );

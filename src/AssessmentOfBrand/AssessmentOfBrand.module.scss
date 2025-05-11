@@ -95,18 +95,20 @@
 
 .scrollable {
     position: relative;
-    padding: 0 0 10px 46px; /* Измените отступы */
+    padding: 0 0 10px 46px;
     max-width: 596px;
     height: 440px;
     overflow: hidden;
-    overflow-y: auto; /* Скрыть горизонтальный скролл */
+    overflow-y: auto;
     overflow-x: hidden;
     scrollbar-width: thin;
     scrollbar-color: #3D8568 rgba(0, 0, 0, 0.5);
-    direction: rtl; /* Установите направление текста слева направо */
+    direction: rtl;
     transition: opacity 0.3s ease;
     background-color: rgba(255, 255, 255, 0.7);
-    span{
+    
+    // Перенесите вложенный селектор в конец
+    span {
         direction: ltr;
     }
 }

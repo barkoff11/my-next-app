@@ -26,25 +26,24 @@ const ExamplesList = () => {
         setIsPopupOpen(false);
     };
 
-    const BASE_PATH = process.env.REACT_APP_BASE_PATH;
 
     return (
         <div className={styles.container}>
             <h1>Новости</h1>
                 <button className={styles['btn_prev']} id='btn_prev'>
                     <svg className={styles.hover}>
-                        <use xlinkHref={`${BASE_PATH}/img/sprite.svg#left-active`}></use>
+                        <use xlinkHref={`/img/sprite.svg#left-active`}></use>
                     </svg>
                     <svg className={styles.unHover}>
-                        <use xlinkHref={`${BASE_PATH}/img/sprite.svg#left`}></use>
+                        <use xlinkHref={`/img/sprite.svg#left`}></use>
                     </svg>
                 </button>
                 <button className={styles['btn_next']} id='btn_next'>
                     <svg className={styles.hover}>
-                        <use xlinkHref={`${BASE_PATH}/img/sprite.svg#left-active`}></use>
+                        <use xlinkHref={`/img/sprite.svg#left-active`}></use>
                     </svg>
                     <svg className={styles.unHover}>
-                        <use xlinkHref={`${BASE_PATH}/img/sprite.svg#left`}></use>
+                        <use xlinkHref={`/img/sprite.svg#left`}></use>
                     </svg>
                 </button>
             <Swiper

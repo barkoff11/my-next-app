@@ -7,7 +7,7 @@ import 'swiper/swiper-bundle.css';
 import 'swiper/css'
 
 const Methods = () => {
-    const BASE_PATH = process.env.REACT_APP_BASE_PATH;
+    
     return (
         <div className={styles.container}>
             <div className={styles.wrapper}>
@@ -20,43 +20,43 @@ const Methods = () => {
     <div className={styles.menu}>
             <a className={`${styles.content} ${styles.one}`}>
                 <svg>
-                    <use xlinkHref={`${BASE_PATH}/img/sprite.svg#methods__item--idi`}></use>
+                    <use xlinkHref={`/img/sprite.svg#methods__item--idi`}></use>
                 </svg>
                 Проведение глубинных интервью (IDI)
             </a>
             <a className={`${styles.content} ${styles.two}`}>
                 <svg>
-                    <use xlinkHref={`${BASE_PATH}/img/sprite.svg#methods__item--dr`}></use>
+                    <use xlinkHref={`/img/sprite.svg#methods__item--dr`}></use>
                 </svg>
             Кабинетные исследования (Desk research) 
             </a>
             <a className={`${styles.content} ${styles.seven}`}>
                 <svg>
-                    <use xlinkHref={`${BASE_PATH}/img/sprite.svg#methods__item--ms`}></use>
+                    <use xlinkHref={`/img/sprite.svg#methods__item--ms`}></use>
                 </svg>
             Тайный покупатель (Mystery Shopping) 
             </a>
             <a className={`${styles.content} ${styles.three}`}>
                 <svg>
-                    <use xlinkHref={`${BASE_PATH}/img/sprite.svg#methods__item--oa`}></use>
+                    <use xlinkHref={`/img/sprite.svg#methods__item--oa`}></use>
                 </svg>
                 Online-анкетирование  
             </a>
             <a className={`${styles.content} ${styles.thore}`}>
                 <svg>
-                    <use xlinkHref={`${BASE_PATH}/img/sprite.svg#methods__item--cjm`}></use>
+                    <use xlinkHref={`/img/sprite.svg#methods__item--cjm`}></use>
                 </svg>
                 Customer Journey Map  
             </a>
             <a className={`${styles.content} ${styles.five}`}>
                 <svg>
-                    <use xlinkHref={`${BASE_PATH}/img/sprite.svg#methods__item--ht`}></use>
+                    <use xlinkHref={`/img/sprite.svg#methods__item--ht`}></use>
                 </svg>
                 Холл-тесты (Hall-test)  
             </a>
             <a className={`${styles.content} ${styles.six}`}>
                 <svg>
-                    <use xlinkHref={`${BASE_PATH}/img/sprite.svg#methods__item--fgd`}></use>
+                    <use xlinkHref={`/img/sprite.svg#methods__item--fgd`}></use>
                 </svg>
                 Исследование фокус-групп (FGD) 
             </a>
@@ -66,7 +66,7 @@ const Methods = () => {
 <SwiperSlide>
     <a className={`${styles.content} ${styles.one}`}>
         <svg>
-            <use xlinkHref={`${BASE_PATH}/img/sprite.svg#methods__item--idi`}></use>
+            <use xlinkHref={`/img/sprite.svg#methods__item--idi`}></use>
         </svg>
         Проведение глубинных интервью (IDI)
     </a>
@@ -74,7 +74,7 @@ const Methods = () => {
 <SwiperSlide>
     <a className={`${styles.content} ${styles.two}`}>
         <svg>
-            <use xlinkHref={`${BASE_PATH}/img/sprite.svg#methods__item--dr`}></use>
+            <use xlinkHref={`/img/sprite.svg#methods__item--dr`}></use>
         </svg>
     Кабинетные исследования (Desk research) 
     </a>
@@ -82,7 +82,7 @@ const Methods = () => {
 <SwiperSlide>
     <a className={`${styles.content} ${styles.seven}`}>
         <svg>
-            <use xlinkHref={`${BASE_PATH}/img/sprite.svg#methods__item--ms`}></use>
+            <use xlinkHref={`/img/sprite.svg#methods__item--ms`}></use>
         </svg>
     Тайный покупатель (Mystery Shopping) 
     </a>
@@ -90,7 +90,7 @@ const Methods = () => {
 <SwiperSlide>
     <a className={`${styles.content} ${styles.three}`}>
         <svg>
-            <use xlinkHref={`${BASE_PATH}/img/sprite.svg#methods__item--oa`}></use>
+            <use xlinkHref={`/img/sprite.svg#methods__item--oa`}></use>
         </svg>
         Online-анкетирование  
     </a>
@@ -98,7 +98,7 @@ const Methods = () => {
 <SwiperSlide>
     <a className={`${styles.content} ${styles.thore}`}>
         <svg>
-            <use xlinkHref={`${BASE_PATH}/img/sprite.svg#methods__item--cjm`}></use>
+            <use xlinkHref={`/img/sprite.svg#methods__item--cjm`}></use>
         </svg>
         Customer Journey Map  
     </a>
@@ -106,7 +106,7 @@ const Methods = () => {
 <SwiperSlide>
     <a className={`${styles.content} ${styles.five}`}>
         <svg>
-            <use xlinkHref={`${BASE_PATH}/img/sprite.svg#methods__item--ht`}></use>
+            <use xlinkHref={`/img/sprite.svg#methods__item--ht`}></use>
         </svg>
         Холл-тесты (Hall-test)  
     </a>
@@ -114,7 +114,7 @@ const Methods = () => {
 <SwiperSlide>
     <a className={`${styles.content} ${styles.six}`}>
         <svg>
-            <use xlinkHref={`${BASE_PATH}/img/sprite.svg#methods__item--fgd`}></use>
+            <use xlinkHref={`/img/sprite.svg#methods__item--fgd`}></use>
         </svg>
         Исследование фокус-групп (FGD) 
     </a>
@@ -122,7 +122,7 @@ const Methods = () => {
 </Swiper>
 </div>
 
-<img src={`${BASE_PATH}/img/method__bg.png`} className={styles.image} alt="Background" />
+<img src={`/img/method__bg.png`} className={styles.image} alt="Background" />
         </div>
     );
 };
@@ -133,7 +133,7 @@ export default Methods;
 <SwiperSlide>
     <a className={`${styles.content} ${styles.one}`}>
         <svg>
-            <use xlinkHref={`${BASE_PATH}/img/sprite.svg#methods__item--idi`}></use>
+            <use xlinkHref={`/img/sprite.svg#methods__item--idi`}></use>
         </svg>
         Проведение глубинных интервью (IDI)
     </a>
@@ -141,7 +141,7 @@ export default Methods;
 <SwiperSlide>
     <a className={`${styles.content} ${styles.two}`}>
         <svg>
-            <use xlinkHref={`${BASE_PATH}/img/sprite.svg#methods__item--dr`}></use>
+            <use xlinkHref={`/img/sprite.svg#methods__item--dr`}></use>
         </svg>
     Кабинетные исследования (Desk research) 
     </a>
@@ -149,7 +149,7 @@ export default Methods;
 <SwiperSlide>
     <a className={`${styles.content} ${styles.seven}`}>
         <svg>
-            <use xlinkHref={`${BASE_PATH}/img/sprite.svg#methods__item--ms`}></use>
+            <use xlinkHref={`/img/sprite.svg#methods__item--ms`}></use>
         </svg>
     Тайный покупатель (Mystery Shopping) 
     </a>
@@ -157,7 +157,7 @@ export default Methods;
 <SwiperSlide>
     <a className={`${styles.content} ${styles.three}`}>
         <svg>
-            <use xlinkHref={`${BASE_PATH}/img/sprite.svg#methods__item--oa`}></use>
+            <use xlinkHref={`/img/sprite.svg#methods__item--oa`}></use>
         </svg>
         Online-анкетирование  
     </a>
@@ -165,7 +165,7 @@ export default Methods;
 <SwiperSlide>
     <a className={`${styles.content} ${styles.thore}`}>
         <svg>
-            <use xlinkHref={`${BASE_PATH}/img/sprite.svg#methods__item--cjm`}></use>
+            <use xlinkHref={`/img/sprite.svg#methods__item--cjm`}></use>
         </svg>
         Customer Journey Map  
     </a>
@@ -173,7 +173,7 @@ export default Methods;
 <SwiperSlide>
     <a className={`${styles.content} ${styles.five}`}>
         <svg>
-            <use xlinkHref={`${BASE_PATH}/img/sprite.svg#methods__item--ht`}></use>
+            <use xlinkHref={`/img/sprite.svg#methods__item--ht`}></use>
         </svg>
         Холл-тесты (Hall-test)  
     </a>
@@ -181,7 +181,7 @@ export default Methods;
 <SwiperSlide>
     <a className={`${styles.content} ${styles.six}`}>
         <svg>
-            <use xlinkHref={`${BASE_PATH}/img/sprite.svg#methods__item--fgd`}></use>
+            <use xlinkHref={`/img/sprite.svg#methods__item--fgd`}></use>
         </svg>
         Исследование фокус-групп (FGD) 
     </a>

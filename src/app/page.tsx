@@ -1,13 +1,13 @@
 import dynamic from 'next/dynamic';
-import Header from "@/Header/Header";
-import Researches from "@/Researches/Researches";
-import Content from '@/Content/Content';
-import Methods from '@/Methods/Methods';
-import Examples from '@/Examples/Examples';
-import ExamplesList from '@/News/NewsList';
-import Contact from '@/Contact/Contact';
-import BottomHeader from '@/BottomHeader/BottomHeader';
-import AssessmentOfBrand from '@/AssessmentOfBrand/AssessmentOfBrand';
+import Header from "@/components/Header/Header";
+import Researches from "@/components/Researches/Researches";
+import Content from '@/components/Content/Content';
+import Methods from '@/components/Methods/Methods';
+import Examples from '@/components/Examples/Examples';
+import ExamplesList from '@/components/News/NewsList';
+import Contact from '@/components/Contact/Contact';
+import BottomHeader from '@/components/BottomHeader/BottomHeader';
+import AssessmentOfBrand from '@/components/AssessmentOfBrand/AssessmentOfBrand';
 // Импортируйте остальные компоненты аналогично
 
 export default function HomePage() {

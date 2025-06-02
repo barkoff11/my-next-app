@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import styles from './Researches.module.scss';
-import Popup from '@/Pop-up/Pop-up';
+import Popup from '@/components/Pop-up/Pop-up';
 
 const Researches = () => {
 

@@ -3,7 +3,7 @@
 import dynamic from 'next/dynamic';
 
 const AssessmentOfBrand = dynamic(
-  () => import('@/AssessmentOfBrand/AssessmentOfBrand'),
+  () => import('@/components/AssessmentOfBrand/AssessmentOfBrand'),
   { 
     ssr: false,
     loading: () => <div>Загрузка...</div>

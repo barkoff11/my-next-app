@@ -57,6 +57,7 @@
 }
 
 .two {
+    background-image: src('../../../public/img/task__purpose-bg--asset.png');
     grid-column: span 1; /* Оставляем 1 колонку */
     grid-row: span 2; /* Объединяем по вертикали на 2 строки */
     width: 350px;
@@ -184,7 +185,7 @@
     }
     
     .two {
-        background-image: src('../../public/img/task__purpose-bg--asset.png');
+        background-image: src('../../../public/img/task__purpose-bg--asset.png');
         grid-column: span 1; /* Оставляем 1 колонку */
         grid-row: span 1; /* Объединяем по вертикали на 2 строки */
         width: 330px;
@@ -321,7 +322,7 @@
     }
     
     .two {
-        background-image: src('../../public/img/task__purpose-bg--asset.png');
+        background-image: src('../../../public/img/task__purpose-bg--asset.png');
         grid-column: span 1; /* Оставляем 1 колонку */
     }
     

@@ -34,3 +34,12 @@ model User {
 }
 
 
+// Команда запуска:
+
+// npx prisma studio
+
+// После запуска ты увидишь сообщение вроде:
+
+// Prisma Studio is up on http://localhost:5555
+
+

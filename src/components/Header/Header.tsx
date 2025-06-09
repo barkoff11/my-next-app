@@ -19,11 +19,10 @@ const Header: React.FC = () => {
     };
 
     useEffect(() => {
-        // Если меню активно, то блокируем прокрутку страницы
         if (isMenuActive) {
           document.body.style.overflow = 'hidden';
         } else {
-          document.body.style.overflow = 'auto'; // Возвращаем прокрутку обратно
+          document.body.style.overflow = 'auto';
         }
       }, [isMenuActive]);
 

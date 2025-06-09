@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+graph TD
+    A[Главная страница] --> B{Просмотр раздела "О компании"}
+    B --> B1[Ознакомление с информацией]
+    B1 --> A
 
-## Getting Started
+    A --> C{Просмотр раздела "Услуги"}
+    C --> C1[Выбор конкретного решения]
+    C1 --> C2[Переход к описанию проекта]
+    C2 --> C3[Ознакомление с описанием]
+    C3 --> F[Кнопка "Оставить заявку"]
 
-First, run the development server:
+    A --> D{Просмотр раздела "Проекты"}
+    D --> D1[Фильтрация по категориям]
+    D1 --> D2[Переход к проекту]
+    D2 --> D3[Открытие карточки проекта]
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+    A --> E{Просмотр раздела "Новости"}
+    E --> E1[Открытие карточки новости]
+    E1 --> E2[Возврат к списку новостей]
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+    A --> G{Просмотр раздела "Контакты"}
+    G --> G1[Отображение карты и контактной информации]
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+    A --> F
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+    F --> F1[Заполнение формы]
+    F1 --> F2[Ввод имени]
+    F2 --> F3[Ввод email или телефона]
+    F3 --> F4[Выбор темы обращения]
+    F4 --> F5[Ввод сообщения]
+    F5 --> F6[Отправка формы]
+    F6 --> F7[Появление уведомления об успешной отправке]
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+    A --> H[Футер]
+    H --> H1[Переход по ссылкам соцсетей]
+    H --> H2[Клик на логотип]
+    H2 --> A

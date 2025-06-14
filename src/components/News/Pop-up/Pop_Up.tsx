@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styles from './PopUp.module.scss';
-import exampleData from './const';
+import exampleData from '../const';
 
 interface PopupProps {
   closePopup: () => void; 

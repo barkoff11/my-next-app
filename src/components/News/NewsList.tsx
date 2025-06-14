@@ -11,7 +11,7 @@ import styles from './News.module.scss';
 import './paginator.scss';
 import exampleData from './const';
 import NewsItem from './NewsItem';
-import Pop_Up from './Pop_Up';
+import Pop_Up from './Pop-up/Pop_Up';
 
 const ExamplesList = () => {
     const [isPopupOpen, setIsPopupOpen] = useState(false); 

@@ -33,6 +33,22 @@ model User {
   posts     Post[]   // Добавляем обратную связь
 }
 
+model News {
+  id        Int      @id @default(autoincrement())
+  title     String
+  date      DateTime @default(now())
+}
+
+model ContactRequest {
+  id        Int      @id @default(autoincrement())
+  name      String
+  email     String
+  message   String
+  agreed    Boolean
+  createdAt DateTime @default(now())
+}
+
+
 
 // Команда запуска:
 

@@ -1,51 +1,123 @@
-import React, { useEffect } from 'react';
+'use client'
+
+import React, { useState, useEffect } from 'react';
 import styles from './Pop-up.module.scss';
 
 interface PopupProps {
-  closePopup: () => void; 
+  closePopup: () => void;
 }
 
 const Popup: React.FC<PopupProps> = ({ closePopup }) => {
-  useEffect(() => {
-    document.body.classList.add('no-scroll');
+  const [form, setForm] = useState({
+    name: '',
+    email: '',
+    message: '',
+    agreed: false,
+  })
 
+  const [status, setStatus] = useState<string | null>(null)
+
+  useEffect(() => {
+    document.body.classList.add('no-scroll')
     return () => {
-      document.body.classList.remove('no-scroll');
-    };
-  }, []);
+      document.body.classList.remove('no-scroll')
+    }
+  }, [])
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const target = e.target as HTMLInputElement; 
+    const { name, value, type, checked } = target
+    setForm((prev) => ({
+      ...prev,
+      [name]: type === 'checkbox' ? checked : value,
+    }))
+  }
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      })
+
+      if (res.ok) {
+        setStatus('Сообщение отправлено!')
+        setForm({ name: '', email: '', message: '', agreed: false })
+      } else {
+        const data = await res.json()
+        setStatus(data.error || 'Ошибка при отправке')
+      }
+    } catch (err) {
+      console.error(err)
+      setStatus('Ошибка сервера')
+    }
+  }
 
   return (
     <div className={styles.popupWrapper}>
-      {/* Overlay, который закроет попап при клике */}
       <div className={styles.overlay} onClick={closePopup}></div>
 
-      {/* Сам попап */}
       <div className={styles.popup}>
-        {/* Кнопка закрытия попапа */}
         <button className={styles.closeBtn} onClick={closePopup}>
           &times;
         </button>
 
         <h2>Напишите нам</h2>
-        <form className={styles.form}>
-          <input className={styles.name} type="text" id="name" placeholder="Ваше имя" />
 
-          <input className={styles.email} type="email" id="email" placeholder="Ваш e-mail" />
+        <form className={styles.form} onSubmit={handleSubmit}>
+          <input
+            className={styles.name}
+            type="text"
+            name="name"
+            placeholder="Ваше имя"
+            value={form.name}
+            onChange={handleChange}
+            required
+          />
 
-          <textarea className={styles.message} id="message" placeholder="Сообщение"></textarea>
+          <input
+            className={styles.email}
+            type="email"
+            name="email"
+            placeholder="Ваш e-mail"
+            value={form.email}
+            onChange={handleChange}
+            required
+          />
 
-          <button className={styles.buttonOne} type="submit">Отправить</button>
+          <textarea
+            className={styles.message}
+            name="message"
+            placeholder="Сообщение"
+            value={form.message}
+            onChange={handleChange}
+            required
+          />
 
           <label className={styles.checkboxContainer}>
-            <input type="checkbox" id="agree" className={styles.checkboxInput} />
+            <input
+              type="checkbox"
+              name="agreed"
+              className={styles.checkboxInput}
+              checked={form.agreed}
+              onChange={handleChange}
+              required
+            />
             <span>
               Я согласен с <a href="#">условиями политики конфиденциальности</a>
             </span>
           </label>
+
+          <button className={styles.buttonOne} type="submit">Отправить</button>
+
+          {status && <p>{status}</p>}
         </form>
       </div>
     </div>
-  );
-};
+  )
+}
 
 export default Popup;

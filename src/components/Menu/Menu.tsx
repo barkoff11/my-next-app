@@ -1,6 +1,6 @@
 "use client";
 
-import styles from './Menu.module.scss'; // Импортируйте ваши стили
+import styles from './Menu.module.scss'; 
 
 const Menu = () => {
     

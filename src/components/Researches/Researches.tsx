@@ -15,8 +15,8 @@ const Researches = () => {
 
     const updateButtonText = () => {
         if (buttonRef.current) {
-            const screenWidth = window.innerWidth; // Получаем ширину окна
-            if (screenWidth < 1100 && screenWidth > 320) { // Задаем пороговое значение ширины
+            const screenWidth = window.innerWidth;
+            if (screenWidth < 1100 && screenWidth > 320) { 
                 setButtonText('Примеры');
             } else {
                 setButtonText('Примеры исследований');
@@ -24,18 +24,24 @@ const Researches = () => {
         }
     };
 
-    // Обработчик для открытия поп-апа
+    const scrollToExamples = () => {
+  const target = document.getElementById('examples');
+  if (target) {
+    target.scrollIntoView({ behavior: 'smooth' });
+  }
+};
+
+
     const openPopup = () => {
         setIsPopupOpen(true);
     };
 
-    // Обработчик для закрытия поп-апа
     const closePopup = () => {
         setIsPopupOpen(false);
     };
 
     useEffect(() => {
-        updateButtonText(); // Первоначальная проверка
+        updateButtonText(); 
         window.addEventListener('resize', updateButtonText);
         return () => {
             window.removeEventListener('resize', updateButtonText);
@@ -64,7 +70,9 @@ const Researches = () => {
                 </div>
     <div className={styles.buttonContainer}>
         <button className={styles.buttonOne} onClick={openPopup}>Заказать исследование</button>
-        <button ref={buttonRef} className={styles.buttonTwo}>{buttonText}</button>
+        <button ref={buttonRef} className={styles.buttonTwo} onClick={scrollToExamples}>
+            {buttonText}
+        </button>
     </div>
         
     </div>

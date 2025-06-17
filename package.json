@@ -21,6 +21,7 @@
     "gulp-rename": "^2.0.0",
     "gulp-svgstore": "^9.0.0",
     "jsonwebtoken": "^9.0.2",
+    "jspdf": "^3.0.1",
     "mysql2": "^3.14.1",
     "next": "^15.3.2",
     "next-auth": "^4.24.11",

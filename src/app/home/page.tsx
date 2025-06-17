@@ -11,16 +11,31 @@ import AssessmentOfBrand from '@/components/AssessmentOfBrand/AssessmentOfBrand'
 
 export default function HomePage() {
   return (
-    <main>
-      <Header />
-      <Researches />
-      <Content />
-      <AssessmentOfBrand />
-      <Methods />
-      <Examples />
-      <ExamplesList />
-      <Contact />
-      <BottomHeader />
-    </main>
+<main>
+  <Header />
+  <section id="about">
+    <Researches />
+  </section>
+  <section id="solutions">
+    <Content />
+  </section>
+  <section id="brand">
+    <AssessmentOfBrand />
+  </section>
+  <section id="methods">
+    <Methods />
+  </section>
+  <section id="examples">
+    <Examples />
+  </section>
+  <section id="news">
+    <ExamplesList />
+  </section>
+  <section id="contacts">
+    <Contact />
+  </section>
+  <BottomHeader />
+</main>
+
   )
 }

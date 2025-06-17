@@ -1,70 +1,69 @@
-"use client";
+'use client';
 
 import React, { useState, useEffect } from 'react';
-import styles from './Header.module.scss'; // Импортируйте ваши стили
+import styles from './Header.module.scss';
 
 const Header: React.FC = () => {
-    
-    const [isMenuActive, setMenuActive] = useState(false);
+  const [isMenuActive, setMenuActive] = useState(false);
 
-    const toggleMenu = () => {
-        setMenuActive((prev) => !prev);
+  const toggleMenu = () => {
+    setMenuActive((prev) => !prev);
+  };
+
+  const handleClickOutside = (event: MouseEvent) => {
+    const target = event.target as HTMLElement;
+    if (isMenuActive && !target.closest(`.${styles.menu}`) && !target.closest(`.${styles.burger_icon}`)) {
+      setMenuActive(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('click', handleClickOutside);
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
     };
+  }, [isMenuActive]);
 
-    const handleClickOutside = (event: MouseEvent) => {
-        const target = event.target as HTMLElement;
-        if (isMenuActive && !target.closest(`.${styles.menu}`) && !target.closest(`.${styles.menu_active}`)) {
-            setMenuActive(false);
-        }
-    };
+  useEffect(() => {
+    document.body.style.overflow = isMenuActive ? 'hidden' : 'auto';
+  }, [isMenuActive]);
 
-    useEffect(() => {
-        if (isMenuActive) {
-          document.body.style.overflow = 'hidden';
-        } else {
-          document.body.style.overflow = 'auto';
-        }
-      }, [isMenuActive]);
+  return (
+    <div className={styles.container}>
+      <div className={`${styles.logo} ${isMenuActive ? styles.logo_active : ''}`} onClick={toggleMenu}>
+        <svg className={`${styles.logoUnActive} ${isMenuActive ? styles.hidden : ''}`}>
+          <use xlinkHref={`/img/sprite.svg#header__logo`}></use>
+        </svg>
 
-    useEffect(() => {
-        document.addEventListener('click', handleClickOutside);
-        return () => {
-            document.removeEventListener('click', handleClickOutside);
-        };
-    }, [isMenuActive]);
+        <svg className={`${styles.logoActive} ${isMenuActive ? '' : styles.hidden}`}>
+          <use xlinkHref={`/img/sprite.svg#elementor-logo--menu`}></use>
+        </svg>
+      </div>
 
-    return (
-        <div className={styles.container}>
-            <div className={`${styles.logo} ${isMenuActive ? styles.logo_active : ''}`} onClick={toggleMenu}>
-                <svg className={`${styles.logoUnActive} ${isMenuActive ? styles.hidden : ''}`}>
-                    <use xlinkHref={`/img/sprite.svg#header__logo`}></use>
-                </svg>
+      {isMenuActive && <div className={styles.blur} onClick={toggleMenu} />}
 
-                <svg className={`${styles.logoActive} ${isMenuActive ? '' : styles.hidden}`}>
-                    <use xlinkHref={`/img/sprite.svg#elementor-logo--menu`}></use>
-                </svg>
-            </div>
-                 <nav className={`${isMenuActive ? styles.blur : styles.navigation}`}>
-                    <ul className={`${styles.menu} ${isMenuActive ? styles.menu_active : ''}`}>
-                        <li><a href="#">О компании</a></li>
-                        <li><a href="#">Решения</a></li>
-                        <li><a href="#">Методы</a></li>
-                        <li><a href="#">Примеры исследований</a></li>
-                        <li><a href="#">Новости</a></li>
-                        <li><a href="#">Контакты</a></li>
-                    </ul>
-                <div className={`${styles.burger_icon} ${isMenuActive ? styles.burger_active : ''}`} onClick={toggleMenu}>
-                    <svg className={styles.openMenu}>
-                        <use xlinkHref={`/img/sprite.svg#header__menu-open`}></use>
-                    </svg>
-                    <svg className={styles.closedMenu}>
-                        <use xlinkHref={`/img/sprite.svg#menu-closed`}></use>
-                    </svg>
-                </div>
-                </nav>
-                <div className={styles.circle}></div>
+      <nav className={styles.navigation}>
+        <ul className={`${styles.menu} ${isMenuActive ? styles.menu_active : ''}`}>
+          <li><a href="#about" onClick={toggleMenu}>О компании</a></li>
+          <li><a href="#solutions" onClick={toggleMenu}>Решения</a></li>
+          <li><a href="#methods" onClick={toggleMenu}>Методы</a></li>
+          <li><a href="#examples" onClick={toggleMenu}>Примеры исследований</a></li>
+          <li><a href="#news" onClick={toggleMenu}>Новости</a></li>
+          <li><a href="#contacts" onClick={toggleMenu}>Контакты</a></li>
+        </ul>
+        <div className={`${styles.burger_icon} ${isMenuActive ? styles.burger_active : ''}`} onClick={toggleMenu}>
+          <svg className={styles.openMenu}>
+            <use xlinkHref={`/img/sprite.svg#header__menu-open`}></use>
+          </svg>
+          <svg className={styles.closedMenu}>
+            <use xlinkHref={`/img/sprite.svg#menu-closed`}></use>
+          </svg>
         </div>
-    );
+      </nav>
+
+      <div className={styles.circle}></div>
+    </div>
+  );
 };
 
 export default Header;
